@@ -158,7 +158,7 @@ function pick(id) {
     : a.moves.map(([n, c, icon, d]) => `
       <li class="slot">
         <span class="slot-icon"><img src="${SPR + icon}" alt=""><span class="slot-cost">${c}</span></span>
-        <span><span class="slot-name">${n}</span><br><span class="slot-desc">${d}</span></span>
+        <span><span class="slot-name">${n}</span><br><span class="slot-desc">${PT ? "Lorem ipsum dolor sit amet, consectetur adipiscing elit." : d}</span></span>
       </li>`).join("");
 }
 pick("slime");
