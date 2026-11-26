@@ -321,7 +321,6 @@ a.tile-cta:hover { background: var(--acento-claro); border-color: var(--acento-c
   background: var(--acento); color: var(--texto-escuro);
   border-top: var(--u) solid var(--acento-claro);
 }
-body { padding-bottom: calc(var(--u) * 20); }
 .foot .wordmark { color: var(--texto-escuro); }
 .foot p { flex: 1; font-size: calc(var(--u) * 5); }
 .foot .btn { height: calc(var(--u) * 10); color: var(--texto-escuro); border-color: var(--texto-escuro-sub); }
@@ -622,7 +621,6 @@ html.intro-in [data-enter="up"] { animation-name: enter-from-bottom; animation-d
   .hero .hints { display: none; }
   .foot { gap: calc(var(--u) * 3); }
   .foot .wordmark, .foot .btn { display: none; }
-  body { padding-bottom: calc(var(--u) * 24); }
   .logo-hero { width: calc(var(--u) * 165); }
 }
 
