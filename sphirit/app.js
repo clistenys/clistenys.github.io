@@ -151,7 +151,8 @@ function autoScroll(strip, preference) {
   preference.addEventListener("change", resume);
   document.addEventListener("visibilitychange", resume);
 }
-setupGallery("sphirits", ["Aivalf","Airdra","Baray","Batryl","Bolturk","DarkNite","Ignithar","Lumibun","Mariposa","Mumbra","Rosalys","Serpyron","Sidralin","Velarion","Whirlven","Zoroark"], true);
+const playableSphirits = Object.keys(speciesData).filter(name => speciesData[name].skills.length > 0);
+setupGallery("sphirits", playableSphirits, true);
 setupGallery("cards", ["AegisBreaker","CobaltEssence","DivineBreath","PurifyingRemedy","ReflectorShield","RisingBlade","RusticArmor","VitalLeaf","VolcanicEruption"], false);
 /* ------------------------------------------------------------ pixel-perfect game footage */
 // The game draws at 320x180 and the clips are whole multiples of it (3x, 4x, 6x).
