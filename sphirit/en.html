@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sphirit</title>
+<meta name="description" content="Build your Sphirit team and combine cards in turn-based tactical battles. Explore the creatures, their elements and the cards in your deck.">
+<meta property="og:title" content="Sphirit">
+<meta property="og:description" content="Build your Sphirit team and combine cards in turn-based tactical battles. Explore the creatures, their elements and the cards in your deck.">
+<meta property="og:image" content="https://clistenys.github.io/sphirit/assets/logo/sphirit-social.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:site_name" content="Sphirit">
+<meta name="twitter:image" content="https://clistenys.github.io/sphirit/assets/logo/sphirit-social.jpg">
+<meta name="twitter:title" content="Sphirit">
+<meta name="twitter:description" content="Build your Sphirit team and combine cards in turn-based tactical battles. Explore the creatures, their elements and the cards in your deck.">
+<meta property="og:url" content="https://clistenys.github.io/sphirit/en.html">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://clistenys.github.io/sphirit/en.html">
+<link rel="alternate" hreflang="en" href="https://clistenys.github.io/sphirit/en.html">
+<link rel="alternate" hreflang="pt-BR" href="https://clistenys.github.io/sphirit/">
+<link rel="alternate" hreflang="x-default" href="https://clistenys.github.io/sphirit/">
+<meta name="theme-color" content="#120e1a">
+<link rel="icon" href="assets/logo/game-icon.png?v=orb3" type="image/png">
+
+
+<link rel="apple-touch-icon" href="assets/logo/apple-touch-icon.png">
+<link rel="preload" href="assets/fonts/Tiny5-Regular.ttf" as="font" type="font/ttf" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="assets/fonts/space.css">
+<link rel="stylesheet" href="style.css?v=hero-glow">
+<script src="boot.js?v=36"></script>
+
+<script src="offline-data.js?v=oct30"></script>
+</head>
+<body>
+<div class="site-intro" id="intro" aria-hidden="true">
+  <div class="intro-stage">
+    <p class="label intro-kicker">Sphirit</p>
+    <svg class="intro-logo" id="intro-logo" viewBox="0 -20 660 140" shape-rendering="crispEdges"></svg>
+    <div class="intro-bar"><span></span></div>
+    <p class="hints intro-skip"><kbd>Click</kbd> Skip</p>
+  </div>
+  <div class="intro-wipe"><span class="intro-shine"></span></div>
+</div>
+<div class="dots" aria-hidden="true"></div>
+<a class="skip" href="#sphirits">Skip to content</a>
+
+<header class="nav" data-enter="down">
+  <a class="brand" href="#top" aria-label="Sphirit, back to top"><img class="header-wordmark" src="assets/logo/wordmark.png" alt="Sphirit"></a>
+  <nav aria-label="Sections" data-glow>
+    <a class="btn btn-ghost" href="#sphirits">Sphirits</a>
+    <a class="btn btn-ghost" href="#cards">Cards</a>
+    <a class="btn btn-ghost" href="#modes">Modes</a>
+    <a class="btn btn-ghost" href="#devlog">Devlog</a>
+  </nav>
+  <a class="btn btn-ghost btn-lang" href="./" hreflang="pt-BR" lang="pt-BR" aria-label="Ver em português">PT</a>
+  <a class="btn btn-cta" href="https://discord.gg/fw2g4bcTnd" target="_blank" rel="noopener noreferrer">Discord</a>
+</header>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="hero">
+    <header class="head">
+      <p class="label" data-enter style="--i:1">Edmond Spider Game</p>
+      <h1 class="sphirit-title" data-enter style="--i:2">Sph<span>irit</span></h1>
+      <span class="bar" aria-hidden="true" data-enter style="--i:3"></span>
+    </header>
+
+    <div class="hero-grid">
+      <figure class="screen" data-enter style="--i:4">
+        <div class="sel"><video id="trailer" src="assets/video/sphirit-teaser.mp4" poster="assets/video/sphirit-teaser.jpg" autoplay muted loop playsinline aria-label="Sphirit teaser"></video></div>
+        <figcaption class="trailer-cap"><span>Gameplay trailer, recorded in-game.</span><button class="btn btn-ghost" id="sound" aria-pressed="false">Sound off</button></figcaption>
+      </figure>
+
+      <div class="hero-menu" data-group="hero">
+        <a class="tile" href="https://store.steampowered.com/app/3737130/Sphirit/" target="_blank" rel="noopener noreferrer" data-selected data-enter style="--i:5">
+          <span class="tile-top"><span class="px" data-icon="play"></span><span class="open">Open &gt;</span></span>
+          <strong class="tile-title">Steam</strong>
+          <span class="tile-sub">View Sphirit on the store</span>
+        </a>
+        <p class="lede" data-enter style="--i:6">Chess where every army casts spells. Classic rules, plus HP, mana and four maneuvers for each army.</p>
+        <div class="tile-row" data-enter style="--i:7">
+          <a class="tile" href="#sphirits"><span class="px" data-icon="estrela"></span><span class="tile-name">Sphirits</span></a>
+          <a class="tile" href="#cards"><span class="px" data-icon="livro"></span><span class="tile-name">Cards</span></a>
+          <a class="tile" href="https://www.instagram.com/kdclistenys/" target="_blank" rel="noopener"><span class="px" data-icon="globo"></span><span class="tile-name">Devlog</span></a>
+        </div>
+      </div>
+    </div>
+
+    <p class="hints" aria-hidden="true" data-enter style="--i:8"><kbd>Click</kbd> Select <kbd>Scroll</kbd> Explore</p>
+  </section>
+
+  <!-- ARMIES -->
+  <section class="section gallery" id="sphirits">
+    <span id="spirits" aria-hidden="true"></span>
+    <span id="armies" aria-hidden="true"></span>
+    <header class="head"><p class="label">Build your team</p><h2 class="title">Sphirits</h2><span class="bar" aria-hidden="true"></span></header>
+    <div class="cards" role="tablist" aria-label="Sphirits"></div>
+    <div class="army panel" role="tabpanel" id="spirits-panel">
+      <div class="army-copy"><p class="label"></p><h3 class="title"></h3><p class="description"></p><ol class="slots"></ol></div>
+      <figure class="screen army-screen"><video muted loop playsinline autoplay></video><figcaption></figcaption></figure>
+    </div>
+  </section>
+
+  <section class="section gallery" id="cards">
+
+    <header class="head"><p class="label">Build your deck</p><h2 class="title">Cards</h2><span class="bar" aria-hidden="true"></span></header>
+    <div class="cards" role="tablist" aria-label="Cards"></div>
+    <div class="army panel" role="tabpanel" id="cards-panel">
+      <div class="army-copy"><p class="label"></p><h3 class="title"></h3><p class="description"></p><ol class="slots"></ol></div>
+      <figure class="screen army-screen"><video muted loop playsinline autoplay></video><figcaption></figcaption></figure>
+    </div>
+  </section>
+
+  <!-- MODES -->
+  <section class="section" id="modes">
+    <header class="head">
+      <p class="label">Ways to play</p>
+      <h2 class="title">Modes</h2>
+      <span class="bar" aria-hidden="true"></span>
+    </header>
+    <div class="modes" data-group="modes">
+      <article class="tile mode" tabindex="0">
+        <span class="px" data-icon="globo"></span>
+        <h3 class="tile-name">Online</h3>
+        <p class="tile-sub">Queue for a match on the full board or the 5x5 Mini. Online games are worth coins and rating.</p>
+      </article>
+      <article class="tile mode" tabindex="0">
+        <span class="px" data-icon="pessoas"></span>
+        <h3 class="tile-name">Invite a friend</h3>
+        <p class="tile-sub">Open a room and send your friend its 6-letter code.</p>
+      </article>
+      <article class="tile mode" tabindex="0">
+        <span class="px" data-icon="robo"></span>
+        <h3 class="tile-name">Duel against Ater</h3>
+        <p class="tile-sub">Five levels, from Basic to Intelligent, on the full board or the Mini.</p>
+        <span class="levels" aria-label="Bot levels one to five">
+          <img src="assets/sprites/NIVEL_BOT_1.png" alt=""><img src="assets/sprites/NIVEL_BOT_2.png" alt=""><img src="assets/sprites/NIVEL_BOT_3.png" alt=""><img src="assets/sprites/NIVEL_BOT_4.png" alt=""><img src="assets/sprites/NIVEL_BOT_5.png" alt="">
+        </span>
+      </article>
+      <article class="tile mode" tabindex="0">
+        <span class="px" data-icon="livro"></span>
+        <h3 class="tile-name">Learn</h3>
+        <p class="tile-sub">Lessons that start with how each piece moves and go all the way to tactics, mates and maneuvers.</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- DEVLOG -->
+  <section class="section" id="devlog">
+    <header class="head">
+      <p class="label">Devlog</p>
+      <h2 class="title">Made in the open</h2>
+      <span class="bar" aria-hidden="true"></span>
+    </header>
+    <p class="intro">What I built on the game, day by day.</p>
+    <div class="log" data-devlog data-limit="3" aria-busy="true"></div>
+    <div class="log-more">
+      <a class="btn btn-ghost" href="devlog.html">See every day</a>
+      <a class="btn btn-ghost" href="https://www.instagram.com/kdclistenys/" target="_blank" rel="noopener">Follow on Instagram</a>
+    </div>
+  </section>
+
+  <!-- PRE-ALPHA ACCESS -->
+  <section class="section final" id="access"><a class="btn btn-cta btn-big" href="https://discord.gg/fw2g4bcTnd" target="_blank" rel="noopener noreferrer">Join Discord</a></section>
+  <p class="page-end"><a href="privacy.html">Privacy</a><span aria-hidden="true">·</span><a href="./" hreflang="pt-BR" lang="pt-BR">Ver em português</a></p>
+</main>
+
+
+
+<script src="battle-data.js?v=guide1"></script>
+<script src="app.js?v=guide1"></script>
+<script src="devlog.js?v=oct30"></script>
+</body>
+</html>
