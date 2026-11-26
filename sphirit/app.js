@@ -138,11 +138,9 @@ function setupGallery(id, names, animated) {
   panel.querySelector(".label").textContent = a.anchor;
   panel.querySelector("h3").textContent = label(names[index]);
   panel.querySelector(".description").textContent = PT ? "Lorem ipsum dolor sit amet, consectetur adipiscing elit." : a.desc;
-  panel.querySelector("figcaption").textContent = PT ? "Lorem ipsum dolor sit amet, consectetur adipiscing elit." : animated ? a.caption : "Sphirit teaser.";
-  const clip = animated ? a.video : "sphirit-teaser";
-  const version = animated ? "?v=3" : "";
-  video.poster = VID + clip + ".jpg" + version;
-  const src = VID + clip + ".mp4" + version;
+  panel.querySelector("figcaption").textContent = PT ? "Lorem ipsum dolor sit amet, consectetur adipiscing elit." : "Sphirit teaser.";
+  video.poster = VID + "sphirit-teaser.jpg";
+  const src = VID + "sphirit-teaser.mp4";
   if (video.getAttribute("src") !== src) video.src = src;
   if (video.getBoundingClientRect().top < innerHeight && video.getBoundingClientRect().bottom > 0) tryPlay(video);
   panel.querySelector(".slots").innerHTML = a.classic
