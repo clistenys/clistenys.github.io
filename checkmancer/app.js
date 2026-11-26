@@ -163,15 +163,6 @@ function pick(id) {
 }
 pick("slime");
 
-/* ------------------------------------------------------------ tactics */
-el("tactics").innerHTML = (PT ? [
-  "Andares de xeque-mate", "Andares de manobra", "Partidas contra os chefes", "Mais de 200 mil desafios",
-  "Um item a cada 5 desafios", "Cronômetro", "Ater, Professor, Bastião e Rainha", "Uma história contada andar por andar",
-] : [
-  "Checkmate floors", "Maneuver floors", "Boss matches", "200,000+ challenges",
-  "An item every 5 challenges", "Timer", "Ater, the Professor, Bastião and the Queen", "A story told floor by floor",
-]).map((t) => `<li>${t}</li>`).join("");
-
 /* ------------------------------------------------------------ pixel-perfect game footage */
 // The game draws at 320x180 and the clips are whole multiples of it (3x, 4x, 6x).
 // Shown at an odd width, every art pixel becomes 2 or 3 screen pixels at random and
@@ -233,103 +224,6 @@ const io = new IntersectionObserver((entries) => {
   });
 }, { threshold: 0.4 });
 document.querySelectorAll("video").forEach((v) => io.observe(v));
-
-/* ------------------------------------------------------------ closed beta access form */
-const form = el("access-form");
-const formMsg = el("access-msg");
-
-function check() {
-  let first = null;
-  const flag = (node, bad) => { node.classList.toggle("invalid", bad); if (bad && !first) first = node; };
-  const email = form.elements.email;
-  flag(email.closest(".field"), !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value.trim()));
-  flag(form.querySelector(".consent"), !form.elements.consent.checked);
-  return first;
-}
-// the rating box only shows up for the two top levels
-form.addEventListener("change", () => { el("rating").hidden = !["strategy", "rated"].includes(form.elements.level.value); });
-form.addEventListener("input", () => { if (form.querySelector(".invalid")) check(); });
-form.addEventListener("submit", async (e) => {
-  e.preventDefault();
-  formMsg.classList.remove("error");
-  const bad = check();
-  if (bad) {
-    formMsg.classList.add("error");
-    formMsg.textContent = bad.classList.contains("consent")
-      ? tr("Tick the box so we can email you about the closed beta.", "Marque a caixa para eu poder te mandar e-mails sobre o closed beta.")
-      : tr("Enter an email address like name@example.com.", "Digite um e-mail como nome@exemplo.com.");
-    (bad.querySelector("input") || bad).focus();
-    return;
-  }
-  if (!ACCESS_ENDPOINT) {
-    formMsg.classList.add("error");
-    formMsg.textContent = tr("The sign-up form isn't connected yet. Follow @pocohyto on Instagram to hear when it opens.",
-      "O formulário ainda não está conectado. Siga @pocohyto no Instagram para saber quando abrir.");
-    return;
-  }
-  const button = form.querySelector("button[type=submit]");
-  button.disabled = true;
-  formMsg.textContent = tr("Sending...", "Enviando...");
-  try {
-    const data = new FormData(form);
-    data.set("form", "checkmancer-site");
-    data.set("elapsed", Math.round((Date.now() - pageStart) / 1000));   // bots submit in under a few seconds
-    data.set("lang", PT ? "pt" : "en");                                  // language of the confirmation email
-    const platforms = data.getAll("platforms");                         // PHP needs [] to keep every checkbox
-    data.delete("platforms");
-    platforms.forEach((p) => data.append("platforms[]", p));
-    const res = await fetch(ACCESS_ENDPOINT, { method: "POST", body: data, headers: { Accept: "application/json" } });
-    if (res.status === 429) throw new Error("busy");
-    if (!res.ok) throw new Error(res.status);
-    // The release flow only shows once the server says the row is saved, never on a bare 200.
-    const reply = await res.json().catch(() => ({}));
-    if (reply.ok !== true || reply.saved !== true) throw new Error("unsaved");
-    showReleaseFlow(data.get("email").trim(), reply.mailed === true);
-  } catch (err) {
-    button.disabled = false;
-    formMsg.classList.add("error");
-    formMsg.textContent = err.message === "busy"
-      ? tr("Too many tries from this connection. Wait a few minutes and send it again.", "Muitas tentativas desta conexão. Espere alguns minutos e envie de novo.")
-      : tr("That didn't go through. Check your connection and send it again.", "Não foi enviado. Confira sua conexão e envie de novo.");
-  }
-});
-
-// After a confirmed save: how the closed beta release works, step by step.
-function showReleaseFlow(email, mailed) {
-  const steps = [
-    [tr("Sign-up saved", "Inscrição salva"),
-     mailed ? tr(`A confirmation is on its way to ${email}. Not there in a few minutes? Check spam and Promotions.`,
-                 `Uma confirmação está a caminho de ${email}. Não chegou em alguns minutos? Confira o spam e a aba Promoções.`)
-            : tr(`Your details are saved under ${email}.`, `Seus dados estão salvos com o e-mail ${email}.`)],
-    [tr("You're on the list", "Você está na lista"),
-     tr("The closed beta opens in small waves of testers. There's nothing else to do for now.",
-        "O closed beta abre em pequenas ondas de testadores. Não precisa fazer mais nada agora.")],
-    [tr("Your invite arrives by email", "Seu convite chega por e-mail"),
-     tr("When your spot opens, I'll email you the build link and how to install it.",
-        "Quando a sua vaga abrir, eu te mando um e-mail com o link do build e como instalar.")],
-    [tr("You help build the game", "Você ajuda a construir o jogo"),
-     tr("Play, tell me what you think, and vote on new armies, maneuvers and Tower floors.",
-        "Jogue, me conte o que achou e vote em novos exércitos, manobras e andares da Torre.")],
-  ];
-  const done = document.createElement("div");
-  done.className = "access-done field-wide";
-  done.setAttribute("role", "status");
-  done.tabIndex = -1;
-  done.innerHTML = `<p class="label">${tr("Request received", "Inscrição recebida")}</p>
-    <p class="title">${tr("Welcome to the team", "Bem-vindo ao time")}</p>
-    <ol class="release-flow"></ol>`;
-  const list = done.querySelector("ol");
-  steps.forEach(([title, text], i) => {
-    const li = document.createElement("li");
-    if (i === 0) li.className = "is-done";
-    li.innerHTML = `<span class="release-num" aria-hidden="true">${i === 0 ? "✓" : i + 1}</span><b></b><span></span>`;
-    li.querySelector("b").textContent = title;
-    li.querySelector("span:last-child").textContent = text;   // textContent: the email is user input
-    list.append(li);
-  });
-  form.replaceChildren(done);
-  done.focus?.();
-}
 
 /* ------------------------------------------------------------ living tiles (tile_pixel.gd) */
 // Every tile, card and button gets the effect layers; the cursor lights the
@@ -420,7 +314,7 @@ tabs.addEventListener("keydown", (e) => {
   if (!root.classList.contains("intro-run") || !box) { box && box.remove(); return; }
 
   // the logo as its 55x5 grid of 20-unit blocks (W = CHECK, B = MANCER)
-  const GRID = [".WW..W..W.WWWW..WW..W..W.B.B.B..BB..B..B..BB..BBBB.BBB.", "W..W.W..W.W....W..W.W.W..BBBBB.B..B.BB.B.B..B.B....B..B", "W....WWWW.WWW..W....WW...B...B.BBBB.B.BB.B....BBB..BBB.", "W..W.W..W.W....W..W.W.W..B.B.B.B..B.B..B.B..B.B....B..B", ".WW..W..W.WWWW..WW..W..W.B.B.B.B..B.B..B..BB..BBBB.B..B"];
+  const GRID = ["WWWW.WWW..W..W.BBB.BBB..BBB.BBBBB","W....W..W.W..W..B..B..B..B....B..","WWWW.WWW..WWWW..B..BBB...B....B..","...W.W....W..W..B..B.B...B....B..","WWWW.W....W..W.BBB.B..B.BBB...B.."];
   const svg = document.getElementById("intro-logo");
   let rects = "", blue = "";
   GRID.forEach((row, y) => [...row].forEach((c, x) => {

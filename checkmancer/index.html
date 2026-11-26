@@ -3,9 +3,9 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Checkmancer: chess where every army casts spells</title>
-<meta name="description" content="Checkmancer is a pixel art tactical chess game. Classic rules, six armies with mana and special maneuvers, the Tower of Challenges, lessons that teach chess from scratch, and online play.">
-<meta property="og:title" content="Checkmancer">
+<title>Sphirit</title>
+<meta name="description" content="Sphirit">
+<meta property="og:title" content="Sphirit">
 <meta property="og:description" content="Chess where every army casts spells. Hand-made pixel art by a solo dev from Brazil.">
 <meta property="og:image" content="https://checkmancer.mentalout.com.br/assets/video/trailer.jpg">
 <meta property="og:url" content="https://checkmancer.mentalout.com.br/">
@@ -26,49 +26,14 @@
 <link rel="stylesheet" href="assets/fonts/space.css">
 <link rel="stylesheet" href="style.css?v=45">
 <script src="boot.js?v=36"></script>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "WebSite",
-      "@id": "https://checkmancer.mentalout.com.br/#website",
-      "name": "Checkmancer",
-      "url": "https://checkmancer.mentalout.com.br/",
-      "inLanguage": ["en", "pt-BR"]
-    },
-    {
-      "@type": "VideoGame",
-      "@id": "https://checkmancer.mentalout.com.br/#game",
-      "name": "Checkmancer",
-      "url": "https://checkmancer.mentalout.com.br/",
-      "description": "Checkmancer is a pixel art tactical chess game: classic rules, six armies with mana and special maneuvers, the Tower of Challenges, lessons that teach chess from scratch, and online play.",
-      "image": "https://checkmancer.mentalout.com.br/assets/video/trailer.jpg",
-      "genre": ["Chess", "Strategy", "Pixel art"],
-      "playMode": ["SinglePlayer", "MultiPlayer"],
-      "author": {"@type": "Person", "name": "Lucas Paz", "url": "https://mentalout.com.br"},
-      "sameAs": ["https://www.instagram.com/pocohyto/"],
-      "trailer": {
-        "@type": "VideoObject",
-        "name": "Checkmancer gameplay trailer",
-        "description": "Gameplay trailer recorded in-game: 8x8 matches with the Amoebi, Astrocéus and Muertos armies, a Mini 5x5 match with the Ashaninka, a floor of the Tower of Challenges and a lesson with Ater.",
-        "thumbnailUrl": "https://checkmancer.mentalout.com.br/assets/video/trailer.jpg",
-        "contentUrl": "https://checkmancer.mentalout.com.br/assets/video/trailer.mp4",
-        "uploadDate": "2026-11-17T14:23:00-03:00",
-        "duration": "PT1M9S",
-        "inLanguage": "en"
-      }
-    }
-  ]
-}
-</script>
+
 <script src="offline-data.js"></script>
 </head>
 <body>
 <div class="site-intro" id="intro" aria-hidden="true">
   <div class="intro-stage">
-    <p class="label intro-kicker">Pixel art tactical chess</p>
-    <svg class="intro-logo" id="intro-logo" viewBox="0 -20 1100 140" shape-rendering="crispEdges"></svg>
+    <p class="label intro-kicker">Sphirit</p>
+    <svg class="intro-logo" id="intro-logo" viewBox="0 -20 660 140" shape-rendering="crispEdges"></svg>
     <div class="intro-bar"><span></span></div>
     <p class="hints intro-skip"><kbd>Click</kbd> Skip</p>
   </div>
@@ -78,15 +43,14 @@
 <a class="skip" href="#armies">Skip to content</a>
 
 <header class="nav" data-enter="down">
-  <a class="brand" href="#top" aria-label="Checkmancer, back to top"><svg class="logo logo-nav" viewBox="0 0 1100 100" shape-rendering="crispEdges" aria-hidden="true" focusable="false"><defs><clipPath id="mancer-nav"><path d="M640 20 L640 0 L680 0 L680 20 Z M640 100 L620 100 L620 20 L640 20 L640 40 L680 40 L680 20 L700 20 L700 100 L680 100 L680 60 L640 60 Z"/><path d="M740 100 L720 100 L720 0 L740 0 L740 20 L760 20 L760 40 L740 40 Z M800 100 L780 100 L780 60 L760 60 L760 40 L780 40 L780 0 L800 0 Z"/><path d="M840 20 L840 0 L880 0 L880 20 Z M840 79.999 L820 79.999 L820 20 L840 20 Z M880 40 L880 20 L900 20 L900 40 Z M900 79.999 L880 79.999 L880 60 L900 60 Z M880 79.999 L880 100 L840 100 L840 79.999 Z"/><path d="M1000 79.999 L1000 100 L920 100 L920 0 L1000 0 L1000 20 L940 20 L940 40 L980 40 L980 60 L940 60 L940 79.999 Z"/><path d="M1040 100 L1020 100 L1020 0 L1080 0 L1080 20 L1040 20 L1040 40 L1080 40 L1080 60 L1040 60 Z M1100 40 L1080 40 L1080 20 L1100 20 Z M1100 100 L1080 100 L1080 60 L1100 60 Z"/><path d="M500 100 L500 0 L520 0 L520 20 L540 20 L540 0 L560 0 L560 20 L580 20 L580 0 L600 0 L600 100 L580 100 L580 40 L560 40 L540 40 L520 40 L520 100 Z M540 79.999 L540 60 L560 60 L560 79.999 L560 100 L540 100 Z"/></clipPath><linearGradient id="shine-nav" x1="0" x2="1" y1="0" y2="0"><stop offset="0" stop-color="#fff" stop-opacity="0"/><stop offset=".3" stop-color="#fff" stop-opacity="0"/><stop offset=".3" stop-color="#fff" stop-opacity=".3"/><stop offset=".4" stop-color="#fff" stop-opacity=".3"/><stop offset=".4" stop-color="#fff" stop-opacity=".6"/><stop offset=".6" stop-color="#fff" stop-opacity=".6"/><stop offset=".6" stop-color="#fff" stop-opacity=".3"/><stop offset=".7" stop-color="#fff" stop-opacity=".3"/><stop offset=".7" stop-color="#fff" stop-opacity="0"/></linearGradient></defs><g class="logo-check"><path d="M20 20 L20 0 L60 0 L60 20 Z M20 79.999 L0 79.999 L0 20 L20 20 Z M60 40 L60 20 L80 20 L80 40 Z M80 79.999 L60 79.999 L60 60 L80 60 Z M60 79.999 L60 100 L20 100 L20 79.999 Z"/><path d="M120 100 L100 100 L100 0 L120 0 L120 40 L160 40 L160 0 L180 0 L180 100 L160 100 L160 60 L120 60 Z"/><path d="M280 79.999 L280 100 L200 100 L200 0 L280 0 L280 20 L220 20 L220 40 L260 40 L260 60 L220 60 L220 79.999 Z"/><path d="M320 20 L320 0 L360 0 L360 20 Z M320 79.999 L300 79.999 L300 20 L320 20 Z M360 40 L360 20 L380 20 L380 40 Z M380 79.999 L360 79.999 L360 60 L380 60 Z M360 79.999 L360 100 L320 100 L320 79.999 Z"/><path d="M420 100 L400 100 L400 0 L420 0 L420 40 L440 40 L440 60 L420 60 Z M460 20 L460 0 L480 0 L480 20 Z M440 40 L440 20 L460 20 L460 40 Z M460 79.999 L440 79.999 L440 60 L460 60 Z M460 100 L460 79.999 L480 79.999 L480 100 Z"/></g><g class="logo-mancer"><path d="M640 20 L640 0 L680 0 L680 20 Z M640 100 L620 100 L620 20 L640 20 L640 40 L680 40 L680 20 L700 20 L700 100 L680 100 L680 60 L640 60 Z"/><path d="M740 100 L720 100 L720 0 L740 0 L740 20 L760 20 L760 40 L740 40 Z M800 100 L780 100 L780 60 L760 60 L760 40 L780 40 L780 0 L800 0 Z"/><path d="M840 20 L840 0 L880 0 L880 20 Z M840 79.999 L820 79.999 L820 20 L840 20 Z M880 40 L880 20 L900 20 L900 40 Z M900 79.999 L880 79.999 L880 60 L900 60 Z M880 79.999 L880 100 L840 100 L840 79.999 Z"/><path d="M1000 79.999 L1000 100 L920 100 L920 0 L1000 0 L1000 20 L940 20 L940 40 L980 40 L980 60 L940 60 L940 79.999 Z"/><path d="M1040 100 L1020 100 L1020 0 L1080 0 L1080 20 L1040 20 L1040 40 L1080 40 L1080 60 L1040 60 Z M1100 40 L1080 40 L1080 20 L1100 20 Z M1100 100 L1080 100 L1080 60 L1100 60 Z"/><path d="M500 100 L500 0 L520 0 L520 20 L540 20 L540 0 L560 0 L560 20 L580 20 L580 0 L600 0 L600 100 L580 100 L580 40 L560 40 L540 40 L520 40 L520 100 Z M540 79.999 L540 60 L560 60 L560 79.999 L560 100 L540 100 Z"/></g><g clip-path="url(#mancer-nav)"><rect class="logo-shine" x="0" y="-20" width="160" height="140" fill="url(#shine-nav)"/></g></svg></a>
+  <a class="brand" href="#top" aria-label="Sphirit, back to top"><svg class="logo logo-nav" viewBox="0 0 660 100" shape-rendering="crispEdges" aria-hidden="true"><path fill="#fff" d="M0 0h20v20h-20zM20 0h20v20h-20zM40 0h20v20h-20zM60 0h20v20h-20zM100 0h20v20h-20zM120 0h20v20h-20zM140 0h20v20h-20zM200 0h20v20h-20zM260 0h20v20h-20zM0 20h20v20h-20zM100 20h20v20h-20zM160 20h20v20h-20zM200 20h20v20h-20zM260 20h20v20h-20zM0 40h20v20h-20zM20 40h20v20h-20zM40 40h20v20h-20zM60 40h20v20h-20zM100 40h20v20h-20zM120 40h20v20h-20zM140 40h20v20h-20zM200 40h20v20h-20zM220 40h20v20h-20zM240 40h20v20h-20zM260 40h20v20h-20zM60 60h20v20h-20zM100 60h20v20h-20zM200 60h20v20h-20zM260 60h20v20h-20zM0 80h20v20h-20zM20 80h20v20h-20zM40 80h20v20h-20zM60 80h20v20h-20zM100 80h20v20h-20zM200 80h20v20h-20zM260 80h20v20h-20z"/><path fill="#398bce" d="M300 0h20v20h-20zM320 0h20v20h-20zM340 0h20v20h-20zM380 0h20v20h-20zM400 0h20v20h-20zM420 0h20v20h-20zM480 0h20v20h-20zM500 0h20v20h-20zM520 0h20v20h-20zM560 0h20v20h-20zM580 0h20v20h-20zM600 0h20v20h-20zM620 0h20v20h-20zM640 0h20v20h-20zM320 20h20v20h-20zM380 20h20v20h-20zM440 20h20v20h-20zM500 20h20v20h-20zM600 20h20v20h-20zM320 40h20v20h-20zM380 40h20v20h-20zM400 40h20v20h-20zM420 40h20v20h-20zM500 40h20v20h-20zM600 40h20v20h-20zM320 60h20v20h-20zM380 60h20v20h-20zM420 60h20v20h-20zM500 60h20v20h-20zM600 60h20v20h-20zM300 80h20v20h-20zM320 80h20v20h-20zM340 80h20v20h-20zM380 80h20v20h-20zM440 80h20v20h-20zM480 80h20v20h-20zM500 80h20v20h-20zM520 80h20v20h-20zM600 80h20v20h-20z"/></svg></a>
   <nav aria-label="Sections" data-glow>
     <a class="btn btn-ghost" href="#armies">Armies</a>
-    <a class="btn btn-ghost" href="#story">Tower</a>
     <a class="btn btn-ghost" href="#modes">Modes</a>
     <a class="btn btn-ghost" href="#devlog">Devlog</a>
   </nav>
   <a class="btn btn-ghost btn-lang" href="pt/index.html?lang=pt" hreflang="pt-BR" lang="pt-BR" aria-label="Ver em português">PT</a>
-  <a class="btn btn-cta" href="#access">Closed beta access</a>
+  <a class="btn btn-cta" href="https://discord.gg/fw2g4bcTnd" target="_blank" rel="noopener noreferrer">Discord</a>
 </header>
 
 <main id="top">
@@ -94,27 +58,26 @@
   <!-- HERO -->
   <section class="hero">
     <header class="head">
-      <p class="label" data-enter style="--i:1">Pixel art tactical chess</p>
-      <h1 class="logo-title" data-enter style="--i:2"><span class="sr-only">Checkmancer</span><svg class="logo logo-hero" viewBox="0 0 1100 100" shape-rendering="crispEdges" aria-hidden="true" focusable="false"><defs><clipPath id="mancer-hero"><path d="M640 20 L640 0 L680 0 L680 20 Z M640 100 L620 100 L620 20 L640 20 L640 40 L680 40 L680 20 L700 20 L700 100 L680 100 L680 60 L640 60 Z"/><path d="M740 100 L720 100 L720 0 L740 0 L740 20 L760 20 L760 40 L740 40 Z M800 100 L780 100 L780 60 L760 60 L760 40 L780 40 L780 0 L800 0 Z"/><path d="M840 20 L840 0 L880 0 L880 20 Z M840 79.999 L820 79.999 L820 20 L840 20 Z M880 40 L880 20 L900 20 L900 40 Z M900 79.999 L880 79.999 L880 60 L900 60 Z M880 79.999 L880 100 L840 100 L840 79.999 Z"/><path d="M1000 79.999 L1000 100 L920 100 L920 0 L1000 0 L1000 20 L940 20 L940 40 L980 40 L980 60 L940 60 L940 79.999 Z"/><path d="M1040 100 L1020 100 L1020 0 L1080 0 L1080 20 L1040 20 L1040 40 L1080 40 L1080 60 L1040 60 Z M1100 40 L1080 40 L1080 20 L1100 20 Z M1100 100 L1080 100 L1080 60 L1100 60 Z"/><path d="M500 100 L500 0 L520 0 L520 20 L540 20 L540 0 L560 0 L560 20 L580 20 L580 0 L600 0 L600 100 L580 100 L580 40 L560 40 L540 40 L520 40 L520 100 Z M540 79.999 L540 60 L560 60 L560 79.999 L560 100 L540 100 Z"/></clipPath><linearGradient id="shine-hero" x1="0" x2="1" y1="0" y2="0"><stop offset="0" stop-color="#fff" stop-opacity="0"/><stop offset=".3" stop-color="#fff" stop-opacity="0"/><stop offset=".3" stop-color="#fff" stop-opacity=".3"/><stop offset=".4" stop-color="#fff" stop-opacity=".3"/><stop offset=".4" stop-color="#fff" stop-opacity=".6"/><stop offset=".6" stop-color="#fff" stop-opacity=".6"/><stop offset=".6" stop-color="#fff" stop-opacity=".3"/><stop offset=".7" stop-color="#fff" stop-opacity=".3"/><stop offset=".7" stop-color="#fff" stop-opacity="0"/></linearGradient></defs><g class="logo-check"><path d="M20 20 L20 0 L60 0 L60 20 Z M20 79.999 L0 79.999 L0 20 L20 20 Z M60 40 L60 20 L80 20 L80 40 Z M80 79.999 L60 79.999 L60 60 L80 60 Z M60 79.999 L60 100 L20 100 L20 79.999 Z"/><path d="M120 100 L100 100 L100 0 L120 0 L120 40 L160 40 L160 0 L180 0 L180 100 L160 100 L160 60 L120 60 Z"/><path d="M280 79.999 L280 100 L200 100 L200 0 L280 0 L280 20 L220 20 L220 40 L260 40 L260 60 L220 60 L220 79.999 Z"/><path d="M320 20 L320 0 L360 0 L360 20 Z M320 79.999 L300 79.999 L300 20 L320 20 Z M360 40 L360 20 L380 20 L380 40 Z M380 79.999 L360 79.999 L360 60 L380 60 Z M360 79.999 L360 100 L320 100 L320 79.999 Z"/><path d="M420 100 L400 100 L400 0 L420 0 L420 40 L440 40 L440 60 L420 60 Z M460 20 L460 0 L480 0 L480 20 Z M440 40 L440 20 L460 20 L460 40 Z M460 79.999 L440 79.999 L440 60 L460 60 Z M460 100 L460 79.999 L480 79.999 L480 100 Z"/></g><g class="logo-mancer"><path d="M640 20 L640 0 L680 0 L680 20 Z M640 100 L620 100 L620 20 L640 20 L640 40 L680 40 L680 20 L700 20 L700 100 L680 100 L680 60 L640 60 Z"/><path d="M740 100 L720 100 L720 0 L740 0 L740 20 L760 20 L760 40 L740 40 Z M800 100 L780 100 L780 60 L760 60 L760 40 L780 40 L780 0 L800 0 Z"/><path d="M840 20 L840 0 L880 0 L880 20 Z M840 79.999 L820 79.999 L820 20 L840 20 Z M880 40 L880 20 L900 20 L900 40 Z M900 79.999 L880 79.999 L880 60 L900 60 Z M880 79.999 L880 100 L840 100 L840 79.999 Z"/><path d="M1000 79.999 L1000 100 L920 100 L920 0 L1000 0 L1000 20 L940 20 L940 40 L980 40 L980 60 L940 60 L940 79.999 Z"/><path d="M1040 100 L1020 100 L1020 0 L1080 0 L1080 20 L1040 20 L1040 40 L1080 40 L1080 60 L1040 60 Z M1100 40 L1080 40 L1080 20 L1100 20 Z M1100 100 L1080 100 L1080 60 L1100 60 Z"/><path d="M500 100 L500 0 L520 0 L520 20 L540 20 L540 0 L560 0 L560 20 L580 20 L580 0 L600 0 L600 100 L580 100 L580 40 L560 40 L540 40 L520 40 L520 100 Z M540 79.999 L540 60 L560 60 L560 79.999 L560 100 L540 100 Z"/></g><g clip-path="url(#mancer-hero)"><rect class="logo-shine" x="0" y="-20" width="160" height="140" fill="url(#shine-hero)"/></g></svg></h1>
+      <p class="label" data-enter style="--i:1">Sphirit</p>
+      <h1 class="logo-title" data-enter style="--i:2"><span class="sr-only">Sphirit</span><svg class="logo logo-hero" viewBox="0 0 660 100" shape-rendering="crispEdges" aria-hidden="true"><path fill="#fff" d="M0 0h20v20h-20zM20 0h20v20h-20zM40 0h20v20h-20zM60 0h20v20h-20zM100 0h20v20h-20zM120 0h20v20h-20zM140 0h20v20h-20zM200 0h20v20h-20zM260 0h20v20h-20zM0 20h20v20h-20zM100 20h20v20h-20zM160 20h20v20h-20zM200 20h20v20h-20zM260 20h20v20h-20zM0 40h20v20h-20zM20 40h20v20h-20zM40 40h20v20h-20zM60 40h20v20h-20zM100 40h20v20h-20zM120 40h20v20h-20zM140 40h20v20h-20zM200 40h20v20h-20zM220 40h20v20h-20zM240 40h20v20h-20zM260 40h20v20h-20zM60 60h20v20h-20zM100 60h20v20h-20zM200 60h20v20h-20zM260 60h20v20h-20zM0 80h20v20h-20zM20 80h20v20h-20zM40 80h20v20h-20zM60 80h20v20h-20zM100 80h20v20h-20zM200 80h20v20h-20zM260 80h20v20h-20z"/><path fill="#398bce" d="M300 0h20v20h-20zM320 0h20v20h-20zM340 0h20v20h-20zM380 0h20v20h-20zM400 0h20v20h-20zM420 0h20v20h-20zM480 0h20v20h-20zM500 0h20v20h-20zM520 0h20v20h-20zM560 0h20v20h-20zM580 0h20v20h-20zM600 0h20v20h-20zM620 0h20v20h-20zM640 0h20v20h-20zM320 20h20v20h-20zM380 20h20v20h-20zM440 20h20v20h-20zM500 20h20v20h-20zM600 20h20v20h-20zM320 40h20v20h-20zM380 40h20v20h-20zM400 40h20v20h-20zM420 40h20v20h-20zM500 40h20v20h-20zM600 40h20v20h-20zM320 60h20v20h-20zM380 60h20v20h-20zM420 60h20v20h-20zM500 60h20v20h-20zM600 60h20v20h-20zM300 80h20v20h-20zM320 80h20v20h-20zM340 80h20v20h-20zM380 80h20v20h-20zM440 80h20v20h-20zM480 80h20v20h-20zM500 80h20v20h-20zM520 80h20v20h-20zM600 80h20v20h-20z"/></svg></h1>
       <span class="bar" aria-hidden="true" data-enter style="--i:3"></span>
     </header>
 
     <div class="hero-grid">
       <figure class="screen" data-enter style="--i:4">
-        <div class="sel"><video id="trailer" src="assets/video/trailer.mp4?v=3" poster="assets/video/trailer.jpg?v=3" autoplay muted loop playsinline aria-label="Checkmancer gameplay trailer: 8x8 matches with the Amoebi, Astrocéus and Muertos armies, a Mini 5x5 match with the Ashaninka, a full floor of the Tower of Challenges and a lesson with Ater"></video></div>
+        <div class="sel"><video id="trailer" src="assets/video/trailer.mp4?v=3" poster="assets/video/trailer.jpg?v=3" autoplay muted loop playsinline aria-label="Sphirit gameplay trailer: 8x8 matches with the Amoebi, Astrocéus and Muertos armies, a Mini 5x5 match with the Ashaninka, a full floor of the Tower of Challenges and a lesson with Ater"></video></div>
         <figcaption class="trailer-cap"><span>Gameplay trailer, recorded in-game.</span><button class="btn btn-ghost" id="sound" aria-pressed="false">Sound off</button></figcaption>
       </figure>
 
       <div class="hero-menu" data-group="hero">
-        <a class="tile" href="#access" data-selected data-enter style="--i:5">
+        <a class="tile" href="https://discord.gg/fw2g4bcTnd" target="_blank" rel="noopener noreferrer" data-selected data-enter style="--i:5">
           <span class="tile-top"><span class="px" data-icon="play"></span><span class="open">Open &gt;</span></span>
-          <strong class="tile-title">Closed beta</strong>
-          <span class="tile-sub">Sign up to play it first</span>
+          <strong class="tile-title">Discord</strong>
+          <span class="tile-sub">Sphirit community</span>
         </a>
         <p class="lede" data-enter style="--i:6">Chess where every army casts spells. Classic rules, plus HP, mana and four maneuvers for each army.</p>
         <div class="tile-row" data-enter style="--i:7">
           <a class="tile" href="#armies"><span class="px" data-icon="estrela"></span><span class="tile-name">Armies</span></a>
-          <a class="tile" href="#story"><span class="px" data-icon="torre"></span><span class="tile-name">Tower</span></a>
           <a class="tile" href="https://www.instagram.com/pocohyto/" target="_blank" rel="noopener"><span class="px" data-icon="globo"></span><span class="tile-name">Devlog</span></a>
         </div>
       </div>
@@ -145,29 +108,6 @@
         <video id="army-video" muted loop playsinline autoplay></video>
         <figcaption id="army-caption"></figcaption>
       </figure>
-    </div>
-  </section>
-
-  <!-- STORY -->
-  <section class="section" id="story">
-    <header class="head">
-      <p class="label">Tower of Challenges</p>
-      <h2 class="title">Help Albus climb the Tower</h2>
-      <span class="bar" aria-hidden="true"></span>
-    </header>
-    <p class="intro">Albus's training by the Order of Caxias, one floor at a time. More than 200,000 challenges, selected and created for the Tower, and some can only be solved with your army's maneuvers. Every 5 challenges you pick an item for the climb, and the Order's champions wait for you with the Caxias army.</p>
-
-    <div class="story-grid">
-      <figure class="screen">
-        <video src="assets/video/torre.mp4?v=1" poster="assets/video/torre.jpg" muted loop playsinline autoplay aria-label="In-game footage of a Tower floor: the checkmate, the item choice and the next floor coming down"></video>
-        <figcaption>A floor recorded in-game: the checkmate, the item and the next floor.</figcaption>
-      </figure>
-    </div>
-
-    <div class="story-more" data-group="story">
-      <div class="tactics">
-        <ul id="tactics"></ul>
-      </div>
     </div>
   </section>
 
@@ -221,91 +161,17 @@
   </section>
 
   <!-- PRE-ALPHA ACCESS -->
-  <section class="section final" id="access">
-    <header class="head">
-      <p class="label">Your move: closed beta</p>
-      <h2 class="title title-xl">Build it with me</h2>
-      <span class="bar" aria-hidden="true"></span>
-    </header>
-    <div class="intro">
-      <p>Checkmancer is made by one person, and I don't want to finish it alone. Closed beta testers get in in small waves, and testing is only the start: after it, you stay on and help me build the game.</p>
-      <ul class="perks">
-        <li>Play new builds before anyone else</li>
-        <li>Vote on new armies, maneuvers and Tower floors</li>
-        <li>Talk to me directly and watch your ideas land in the game</li>
-      </ul>
-      <p>Leave your details and I'll email you when your spot opens.</p>
-    </div>
-
-    <form class="access panel" id="access-form" novalidate>
-      <div class="field field-wide">
-        <label for="f-email" class="label">Email <span class="req">required</span></label>
-        <input id="f-email" name="email" type="email" autocomplete="email" placeholder="you@example.com" required>
-      </div>
-      <fieldset class="field field-wide">
-        <legend class="label">Your chess level <span class="opt">matches the game's 5 bot levels</span></legend>
-        <div class="choices choices-levels">
-          <label class="choice choice-level"><input type="radio" name="level" value="learning"><span><img src="assets/sprites/NIVEL_BOT_1.png" alt=""><b>I'm still learning the rules</b><small>Basic</small></span></label>
-          <label class="choice choice-level"><input type="radio" name="level" value="rules"><span><img src="assets/sprites/NIVEL_BOT_2.png" alt=""><b>I know the rules and play now and then</b><small>Beginner</small></span></label>
-          <label class="choice choice-level"><input type="radio" name="level" value="tactics"><span><img src="assets/sprites/NIVEL_BOT_3.png" alt=""><b>I spot tactics like forks and pins</b><small>Intermediate</small></span></label>
-          <label class="choice choice-level"><input type="radio" name="level" value="strategy"><span><img src="assets/sprites/NIVEL_BOT_4.png" alt=""><b>I plan ahead and know openings and endgames</b><small>Advanced</small></span></label>
-          <label class="choice choice-level"><input type="radio" name="level" value="rated"><span><img src="assets/sprites/NIVEL_BOT_5.png" alt=""><b>I play rated games or tournaments</b><small>Intelligent</small></span></label>
-        </div>
-        <div class="rating" id="rating" hidden>
-          <label for="f-rating" class="label">Rating <span class="opt">optional</span></label>
-          <input id="f-rating" name="rating" type="text" inputmode="numeric" maxlength="12" placeholder="e.g. 1500">
-        </div>
-      </fieldset>
-      <fieldset class="field field-wide">
-        <legend class="label">Where would you play? <span class="opt">pick all that apply</span></legend>
-        <div class="choices">
-          <label class="choice"><input type="checkbox" name="platforms" value="windows"><span>Windows PC</span></label><label class="choice"><input type="checkbox" name="platforms" value="mac"><span>Mac</span></label><label class="choice"><input type="checkbox" name="platforms" value="linux"><span>Linux</span></label><label class="choice"><input type="checkbox" name="platforms" value="browser"><span>Browser</span></label><label class="choice"><input type="checkbox" name="platforms" value="phone"><span>Phone</span></label>
-        </div>
-      </fieldset>
-      <fieldset class="field field-wide">
-        <legend class="label">Which army caught your eye?</legend>
-        <div class="choices">
-          <label class="choice choice-card"><input type="radio" name="army" value="reino_visco"><span><img src="assets/sprites/cartao_amoebi.png?v=2" alt="">Amoebi</span></label><label class="choice choice-card"><input type="radio" name="army" value="unicornio"><span><img src="assets/sprites/cartao_astroceus.png?v=2" alt="">Astrocéus</span></label><label class="choice choice-card"><input type="radio" name="army" value="ashaninka"><span><img src="assets/sprites/cartao_ashaninka_v2.png" alt="">Ashaninka</span></label><label class="choice choice-card"><input type="radio" name="army" value="eclipse"><span><img src="assets/sprites/cartao_catedral.png" alt="">Cathedral</span></label><label class="choice choice-card"><input type="radio" name="army" value="muertos"><span><img src="assets/sprites/cartao_muertos.png" alt="">Muertos</span></label><label class="choice choice-card"><input type="radio" name="army" value="caxias"><span><img src="assets/sprites/cartao_caxias.png?v=2" alt="">Caxias</span></label>
-        </div>
-      </fieldset>
-      <fieldset class="field">
-        <legend class="label">Where did you find us?</legend>
-        <div class="choices">
-          <label class="choice"><input type="radio" name="heard_from" value="instagram"><span>Instagram</span></label><label class="choice"><input type="radio" name="heard_from" value="tiktok"><span>TikTok</span></label><label class="choice"><input type="radio" name="heard_from" value="reddit"><span>Reddit</span></label><label class="choice"><input type="radio" name="heard_from" value="friend"><span>A friend</span></label><label class="choice"><input type="radio" name="heard_from" value="other"><span>Other</span></label>
-        </div>
-      </fieldset>
-      <div class="field">
-        <label for="f-country" class="label">Country</label>
-        <div class="combo" id="combo">
-          <span class="combo-flag" id="combo-flag" aria-hidden="true"></span>
-          <input id="f-country" type="text" role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="country-list" autocomplete="off" spellcheck="false" placeholder="Search your country">
-          <span class="combo-arrow" aria-hidden="true"></span>
-          <ul class="combo-list" id="country-list" role="listbox" aria-label="Countries" hidden></ul>
-        </div>
-        <input type="hidden" name="country" id="f-country-name">
-        <input type="hidden" name="country_code" id="f-country-code">
-      </div>
-      <label class="consent field-wide">
-        <input type="checkbox" name="consent" value="yes" required>
-        <span>I agree to receive emails about the Checkmancer closed beta and its development, and I can ask for my data to be deleted at any time. <a href="privacy.html">How my data is used</a></span>
-      </label>
-      <input class="hp" type="text" name="cm_hp" tabindex="-1" autocomplete="off" aria-hidden="true" data-1p-ignore data-lpignore="true" data-bwignore data-form-type="other">
-      <div class="access-foot field-wide">
-        <button class="btn btn-cta btn-big" type="submit">Join the closed beta</button>
-        <p class="access-msg" id="access-msg" aria-live="polite"></p>
-      </div>
-    </form>
-  </section>
+  <section class="section final" id="access"><a class="btn btn-cta btn-big" href="https://discord.gg/fw2g4bcTnd" target="_blank" rel="noopener noreferrer">Join Discord</a></section>
   <p class="page-end"><a href="privacy.html">Privacy</a><span aria-hidden="true">·</span><a href="pt/index.html?lang=pt" hreflang="pt-BR" lang="pt-BR">Ver em português</a></p>
 </main>
 
 <footer class="foot" data-enter="up">
-  <span class="wordmark">Checkmancer</span>
+  <span class="wordmark">Sphirit</span>
   <p>Hand-made pixel art by a solo dev, <a class="ext" href="https://mentalout.com.br" target="_blank" rel="noopener">Lucas Paz<span class="px" data-icon="externo" aria-label="(opens in a new tab)"></span></a>, from Brazil.</p>
   <a class="btn btn-ghost" href="https://www.instagram.com/pocohyto/" target="_blank" rel="noopener">Instagram</a>
 </footer>
 
-<script src="app.js?v=47"></script>
+<script src="app.js?v=sphirit1"></script>
 <script src="devlog.js?v=1"></script>
 </body>
 </html>
