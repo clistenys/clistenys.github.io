@@ -138,9 +138,12 @@ function setupGallery(id, names, animated) {
   panel.querySelector(".label").textContent = a.anchor;
   panel.querySelector("h3").textContent = label(names[index]);
   panel.querySelector(".description").textContent = PT ? "Lorem ipsum dolor sit amet, consectetur adipiscing elit." : a.desc;
-  panel.querySelector("figcaption").textContent = PT ? "Lorem ipsum dolor sit amet, consectetur adipiscing elit." : a.caption;
-  video.poster = VID + a.video + ".jpg?v=3";
-  video.src = VID + a.video + ".mp4?v=3";   // v=3: re-recorded with the six armies (yuv420p for phones)
+  panel.querySelector("figcaption").textContent = PT ? "Lorem ipsum dolor sit amet, consectetur adipiscing elit." : animated ? a.caption : "Sphirit teaser.";
+  const clip = animated ? a.video : "sphirit-teaser";
+  const version = animated ? "?v=3" : "";
+  video.poster = VID + clip + ".jpg" + version;
+  const src = VID + clip + ".mp4" + version;
+  if (video.getAttribute("src") !== src) video.src = src;
   if (video.getBoundingClientRect().top < innerHeight && video.getBoundingClientRect().bottom > 0) tryPlay(video);
   panel.querySelector(".slots").innerHTML = a.classic
     ? `<li class="classic">${["REI_6", "RAINHA_5", "TORRE_4", "BISPO_2", "CAVALO_3", "PEAO_1"]
