@@ -17,7 +17,7 @@
     return e;
   }
 
-  function entry(item) {
+  function entry(item, preview) {
     var txt = item[pt ? "pt" : "en"];
     var date = new Date(item.d + "T00:00:00Z");
     var art = el("article", "log-day");
@@ -26,7 +26,7 @@
     art.appendChild(time);
     art.appendChild(el("h3", "log-title", txt.t));
     var ul = el("ul", "perks");
-    txt.i.forEach(function (line) { ul.appendChild(el("li", "", line)); });
+    txt.i.forEach(function (line) { ul.appendChild(el("li", "", pt && preview ? "Lorem ipsum dolor sit amet, consectetur adipiscing elit." : line)); });
     art.appendChild(ul);
     return art;
   }
@@ -37,7 +37,7 @@
       boxes.forEach(function (box) {
         var limit = parseInt(box.dataset.limit, 10);
         if (limit) {
-          log.slice(0, limit).forEach(function (item) { box.appendChild(entry(item)); });
+          log.slice(0, limit).forEach(function (item) { box.appendChild(entry(item, true)); });
         } else {
           var current = "";
           log.forEach(function (item) {
