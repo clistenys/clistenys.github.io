@@ -681,3 +681,7 @@ html.intro-in [data-enter="up"] { animation-name: enter-from-bottom; animation-d
 .gallery-art { min-height: 210px; display: grid; place-items: center; background: var(--fundo); }
 .gallery-art img { width: min(200px, 75%); height: 200px; object-fit: contain; image-rendering: pixelated; }
 .gallery .army-copy button { justify-self: start; }
+
+.header-wordmark { display:block; width:clamp(86px, 10vw, 126px); height:auto; }
+.gallery .cards { scrollbar-width:none; }
+.gallery .cards::-webkit-scrollbar { display:none; }

@@ -17,15 +17,15 @@
 <link rel="alternate" hreflang="pt-BR" href="https://clistenys.github.io/">
 <link rel="alternate" hreflang="x-default" href="https://clistenys.github.io/sphirit/index.html">
 <meta name="theme-color" content="#120e1a">
-<link rel="icon" href="../assets/logo/game-icon.png" type="image/png">
-<link rel="icon" href="../assets/logo/favicon-32.png" sizes="32x32" type="image/png">
-<link rel="icon" href="../favicon.ico" sizes="any">
+<link rel="icon" href="../assets/logo/game-icon.png?v=orb3" type="image/png">
+
+
 <link rel="apple-touch-icon" href="../assets/logo/apple-touch-icon.png">
 <link rel="preload" href="../assets/fonts/Tiny5-Regular.ttf" as="font" type="font/ttf" crossorigin>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="../assets/fonts/space.css">
-<link rel="stylesheet" href="../style.css?v=crimson2">
+<link rel="stylesheet" href="../style.css?v=panels3">
 <script src="../boot.js?v=36"></script>
 
 <script src="../offline-data.js"></script>
@@ -44,7 +44,7 @@
 <a class="skip" href="#spirits">Pular para o conteúdo</a>
 
 <header class="nav" data-enter="down">
-  <a class="brand" href="#top" aria-label="Sphirit, voltar ao topo"><img class="game-badge" src="../assets/logo/game-icon.png" alt="Sphirit"></a>
+  <a class="brand" href="#top" aria-label="Sphirit, voltar ao topo"><img class="header-wordmark" src="../assets/logo/wordmark.png" alt="Sphirit"></a>
   <nav aria-label="Seções" data-glow>
     <a class="btn btn-ghost" href="#spirits">Spirits</a>
     <a class="btn btn-ghost" href="#cards">Cartas</a>
@@ -60,8 +60,7 @@
   <!-- HERO -->
   <section class="hero">
     <header class="head">
-      <p class="label" data-enter style="--i:1">Sphirit</p>
-      <h1 class="logo-title" data-enter style="--i:2"><span class="sr-only">Sphirit</span><img class="game-wordmark" src="../assets/logo/wordmark.png" alt=""></h1>
+<h1 class="logo-title" data-enter style="--i:2"><span class="sr-only">Sphirit</span></h1>
       <span class="bar" aria-hidden="true" data-enter style="--i:3"></span>
     </header>
 
@@ -94,8 +93,8 @@
     <header class="head"><p class="label">Escolha seu Spirit</p><h2 class="title">Spirits</h2><span class="bar" aria-hidden="true"></span></header>
     <div class="cards" role="tablist" aria-label="Spirits"></div>
     <div class="army panel" role="tabpanel" id="spirits-panel">
-      <div class="army-copy"><p class="label">Spirit</p><h3 class="title"></h3><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p><button class="btn btn-ghost" type="button"></button></div>
-      <figure class="screen gallery-art"><img alt=""></figure>
+      <div class="army-copy"><p class="label"></p><h3 class="title"></h3><p class="description"></p><ol class="slots"></ol></div>
+      <figure class="screen army-screen"><video muted loop playsinline autoplay></video><figcaption></figcaption></figure>
     </div>
   </section>
 
@@ -104,8 +103,8 @@
     <header class="head"><p class="label">Escolha sua carta</p><h2 class="title">Cartas</h2><span class="bar" aria-hidden="true"></span></header>
     <div class="cards" role="tablist" aria-label="Cartas"></div>
     <div class="army panel" role="tabpanel" id="cards-panel">
-      <div class="army-copy"><p class="label">Carta</p><h3 class="title"></h3><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p></div>
-      <figure class="screen gallery-art"><img alt=""></figure>
+      <div class="army-copy"><p class="label"></p><h3 class="title"></h3><p class="description"></p><ol class="slots"></ol></div>
+      <figure class="screen army-screen"><video muted loop playsinline autoplay></video><figcaption></figcaption></figure>
     </div>
   </section>
 
@@ -165,7 +164,7 @@
 
 
 
-<script src="../app.js?v=gallery2"></script>
+<script src="../app.js?v=panels3"></script>
 <script src="../devlog.js?v=9bfddecde0"></script>
 </body>
 </html>
