@@ -7,7 +7,7 @@
 <meta name="description" content="Sphirit">
 <meta property="og:title" content="Sphirit">
 <meta property="og:description" content="Xadrez em que cada exército lança magias. Pixel art feita à mão por um dev solo do Brasil.">
-<meta property="og:image" content="https://clistenys.github.io/sphirit/assets/video/trailer.jpg">
+<meta property="og:image" content="https://clistenys.github.io/sphirit/assets/video/sphirit-teaser.jpg">
 <meta property="og:url" content="https://clistenys.github.io/">
 <meta property="og:locale" content="pt_BR">
 <meta property="og:type" content="website">
@@ -17,7 +17,7 @@
 <link rel="alternate" hreflang="pt-BR" href="https://clistenys.github.io/">
 <link rel="alternate" hreflang="x-default" href="https://clistenys.github.io/">
 <meta name="theme-color" content="#120e1a">
-<link rel="icon" href="./sphirit/assets/logo/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="./sphirit/assets/logo/game-icon.png" type="image/png">
 <link rel="icon" href="./sphirit/assets/logo/favicon-32.png" sizes="32x32" type="image/png">
 <link rel="icon" href="./sphirit/favicon.ico" sizes="any">
 <link rel="apple-touch-icon" href="./sphirit/assets/logo/apple-touch-icon.png">
@@ -25,7 +25,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="./sphirit/assets/fonts/space.css">
-<link rel="stylesheet" href="./sphirit/style.css?v=45">
+<link rel="stylesheet" href="./sphirit/style.css?v=crimson2">
 <script src="./sphirit/boot.js?v=36"></script>
 
 <script src="./sphirit/offline-data.js"></script>
@@ -41,12 +41,13 @@
   <div class="intro-wipe"><span class="intro-shine"></span></div>
 </div>
 <div class="dots" aria-hidden="true"></div>
-<a class="skip" href="#armies">Pular para o conteúdo</a>
+<a class="skip" href="#spirits">Pular para o conteúdo</a>
 
 <header class="nav" data-enter="down">
-  <a class="brand" href="#top" aria-label="Sphirit, voltar ao topo"><svg class="logo logo-nav" viewBox="0 0 660 100" shape-rendering="crispEdges" aria-hidden="true"><path fill="#fff" d="M0 0h20v20h-20zM20 0h20v20h-20zM40 0h20v20h-20zM60 0h20v20h-20zM100 0h20v20h-20zM120 0h20v20h-20zM140 0h20v20h-20zM200 0h20v20h-20zM260 0h20v20h-20zM0 20h20v20h-20zM100 20h20v20h-20zM160 20h20v20h-20zM200 20h20v20h-20zM260 20h20v20h-20zM0 40h20v20h-20zM20 40h20v20h-20zM40 40h20v20h-20zM60 40h20v20h-20zM100 40h20v20h-20zM120 40h20v20h-20zM140 40h20v20h-20zM200 40h20v20h-20zM220 40h20v20h-20zM240 40h20v20h-20zM260 40h20v20h-20zM60 60h20v20h-20zM100 60h20v20h-20zM200 60h20v20h-20zM260 60h20v20h-20zM0 80h20v20h-20zM20 80h20v20h-20zM40 80h20v20h-20zM60 80h20v20h-20zM100 80h20v20h-20zM200 80h20v20h-20zM260 80h20v20h-20z"/><path fill="#398bce" d="M300 0h20v20h-20zM320 0h20v20h-20zM340 0h20v20h-20zM380 0h20v20h-20zM400 0h20v20h-20zM420 0h20v20h-20zM480 0h20v20h-20zM500 0h20v20h-20zM520 0h20v20h-20zM560 0h20v20h-20zM580 0h20v20h-20zM600 0h20v20h-20zM620 0h20v20h-20zM640 0h20v20h-20zM320 20h20v20h-20zM380 20h20v20h-20zM440 20h20v20h-20zM500 20h20v20h-20zM600 20h20v20h-20zM320 40h20v20h-20zM380 40h20v20h-20zM400 40h20v20h-20zM420 40h20v20h-20zM500 40h20v20h-20zM600 40h20v20h-20zM320 60h20v20h-20zM380 60h20v20h-20zM420 60h20v20h-20zM500 60h20v20h-20zM600 60h20v20h-20zM300 80h20v20h-20zM320 80h20v20h-20zM340 80h20v20h-20zM380 80h20v20h-20zM440 80h20v20h-20zM480 80h20v20h-20zM500 80h20v20h-20zM520 80h20v20h-20zM600 80h20v20h-20z"/></svg></a>
+  <a class="brand" href="#top" aria-label="Sphirit, voltar ao topo"><img class="game-badge" src="./sphirit/assets/logo/game-icon.png" alt="Sphirit"></a>
   <nav aria-label="Seções" data-glow>
-    <a class="btn btn-ghost" href="#armies">Exércitos</a>
+    <a class="btn btn-ghost" href="#spirits">Spirits</a>
+    <a class="btn btn-ghost" href="#cards">Cartas</a>
     <a class="btn btn-ghost" href="#modes">Modos</a>
     <a class="btn btn-ghost" href="#devlog">Devlog</a>
   </nav>
@@ -60,13 +61,13 @@
   <section class="hero">
     <header class="head">
       <p class="label" data-enter style="--i:1">Sphirit</p>
-      <h1 class="logo-title" data-enter style="--i:2"><span class="sr-only">Sphirit</span><svg class="logo logo-hero" viewBox="0 0 660 100" shape-rendering="crispEdges" aria-hidden="true"><path fill="#fff" d="M0 0h20v20h-20zM20 0h20v20h-20zM40 0h20v20h-20zM60 0h20v20h-20zM100 0h20v20h-20zM120 0h20v20h-20zM140 0h20v20h-20zM200 0h20v20h-20zM260 0h20v20h-20zM0 20h20v20h-20zM100 20h20v20h-20zM160 20h20v20h-20zM200 20h20v20h-20zM260 20h20v20h-20zM0 40h20v20h-20zM20 40h20v20h-20zM40 40h20v20h-20zM60 40h20v20h-20zM100 40h20v20h-20zM120 40h20v20h-20zM140 40h20v20h-20zM200 40h20v20h-20zM220 40h20v20h-20zM240 40h20v20h-20zM260 40h20v20h-20zM60 60h20v20h-20zM100 60h20v20h-20zM200 60h20v20h-20zM260 60h20v20h-20zM0 80h20v20h-20zM20 80h20v20h-20zM40 80h20v20h-20zM60 80h20v20h-20zM100 80h20v20h-20zM200 80h20v20h-20zM260 80h20v20h-20z"/><path fill="#398bce" d="M300 0h20v20h-20zM320 0h20v20h-20zM340 0h20v20h-20zM380 0h20v20h-20zM400 0h20v20h-20zM420 0h20v20h-20zM480 0h20v20h-20zM500 0h20v20h-20zM520 0h20v20h-20zM560 0h20v20h-20zM580 0h20v20h-20zM600 0h20v20h-20zM620 0h20v20h-20zM640 0h20v20h-20zM320 20h20v20h-20zM380 20h20v20h-20zM440 20h20v20h-20zM500 20h20v20h-20zM600 20h20v20h-20zM320 40h20v20h-20zM380 40h20v20h-20zM400 40h20v20h-20zM420 40h20v20h-20zM500 40h20v20h-20zM600 40h20v20h-20zM320 60h20v20h-20zM380 60h20v20h-20zM420 60h20v20h-20zM500 60h20v20h-20zM600 60h20v20h-20zM300 80h20v20h-20zM320 80h20v20h-20zM340 80h20v20h-20zM380 80h20v20h-20zM440 80h20v20h-20zM480 80h20v20h-20zM500 80h20v20h-20zM520 80h20v20h-20zM600 80h20v20h-20z"/></svg></h1>
+      <h1 class="logo-title" data-enter style="--i:2"><span class="sr-only">Sphirit</span><img class="game-wordmark" src="./sphirit/assets/logo/wordmark.png" alt=""></h1>
       <span class="bar" aria-hidden="true" data-enter style="--i:3"></span>
     </header>
 
     <div class="hero-grid">
       <figure class="screen" data-enter style="--i:4">
-        <div class="sel"><video id="trailer" src="./sphirit/assets/video/trailer_pt.mp4?v=3" poster="./sphirit/assets/video/trailer.jpg?v=3" autoplay muted loop playsinline aria-label="Trailer do Sphirit: partidas 8x8 com os exércitos Amoebi, Astrocéus e Muertos, uma partida Mini 5x5 com o Ashaninka, um andar inteiro da Torre de Desafios e uma aula com a Ater"></video></div>
+        <div class="sel"><video id="trailer" src="./sphirit/assets/video/sphirit-teaser.mp4" poster="./sphirit/assets/video/sphirit-teaser.jpg" autoplay muted loop playsinline aria-label="Teaser de Sphirit"></video></div>
         <figcaption class="trailer-cap"><span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span><button class="btn btn-ghost" id="sound" aria-pressed="false">Som desligado</button></figcaption>
       </figure>
 
@@ -78,7 +79,7 @@
         </a>
         <p class="lede" data-enter style="--i:6">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
         <div class="tile-row" data-enter style="--i:7">
-          <a class="tile" href="#armies"><span class="px" data-icon="estrela"></span><span class="tile-name">Exércitos</span></a>
+          <a class="tile" href="#spirits"><span class="px" data-icon="estrela"></span><span class="tile-name">Spirits</span></a>
           <a class="tile" href="https://www.instagram.com/kdclistenys/" target="_blank" rel="noopener"><span class="px" data-icon="globo"></span><span class="tile-name">Devlog</span></a>
         </div>
       </div>
@@ -88,27 +89,23 @@
   </section>
 
   <!-- ARMIES -->
-  <section class="section" id="armies">
-    <header class="head">
-      <p class="label">Escolha seu exército</p>
-      <h2 class="title">Seis exércitos</h2>
-      <span class="bar" aria-hidden="true"></span>
-    </header>
-    <p class="intro">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+  <section class="section gallery" id="spirits">
+    <span id="armies" aria-hidden="true"></span>
+    <header class="head"><p class="label">Escolha seu Spirit</p><h2 class="title">Spirits</h2><span class="bar" aria-hidden="true"></span></header>
+    <div class="cards" role="tablist" aria-label="Spirits"></div>
+    <div class="army panel" role="tabpanel" id="spirits-panel">
+      <div class="army-copy"><p class="label">Spirit</p><h3 class="title"></h3><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p><button class="btn btn-ghost" type="button"></button></div>
+      <figure class="screen gallery-art"><img alt=""></figure>
+    </div>
+  </section>
 
-    <div class="cards" role="tablist" aria-label="Exércitos" id="army-tabs"></div>
+  <section class="section gallery" id="cards">
 
-    <div class="army panel" id="army-panel" role="tabpanel">
-      <div class="army-copy">
-        <p class="label" id="army-anchor"></p>
-        <h3 class="title" id="army-name"></h3>
-        <p id="army-desc"></p>
-        <ol class="slots" id="army-slots"></ol>
-      </div>
-      <figure class="screen army-screen">
-        <video id="army-video" muted loop playsinline autoplay></video>
-        <figcaption id="army-caption"></figcaption>
-      </figure>
+    <header class="head"><p class="label">Escolha sua carta</p><h2 class="title">Cartas</h2><span class="bar" aria-hidden="true"></span></header>
+    <div class="cards" role="tablist" aria-label="Cartas"></div>
+    <div class="army panel" role="tabpanel" id="cards-panel">
+      <div class="army-copy"><p class="label">Carta</p><h3 class="title"></h3><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p></div>
+      <figure class="screen gallery-art"><img alt=""></figure>
     </div>
   </section>
 
@@ -168,7 +165,7 @@
 
 
 
-<script src="./sphirit/app.js?v=sphirit1"></script>
+<script src="./sphirit/app.js?v=gallery2"></script>
 <script src="./sphirit/devlog.js?v=9bfddecde0"></script>
 </body>
 </html>
