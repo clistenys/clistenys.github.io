@@ -1,4 +1,4 @@
-/* Checkmancer site.
+/* Sphirit site.
    Built on the game's own pixel menu (scripts/menu_pixel/estilo_pixel.gd):
    same palette, Tiny5 only, 1-pixel borders, no rounding, no soft shadows.
    --u is one game pixel on screen; every size is a multiple of it. */
@@ -206,7 +206,7 @@ a.tile-cta:hover { background: var(--acento-claro); border-color: var(--acento-c
 }
 .wordmark { font-size: var(--t); letter-spacing: var(--u); text-transform: uppercase; color: var(--texto-forte); }
 
-/* ---------- logo (Checkmancer logo complete.svg) with a constant shine on the blue part ---------- */
+/* ---------- logo (Sphirit logo complete.svg) with a constant shine on the blue part ---------- */
 .sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
 .brand { display: block; line-height: 0; }
 .logo { display: block; height: auto; overflow: visible; }

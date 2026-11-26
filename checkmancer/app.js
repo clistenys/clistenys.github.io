@@ -1,4 +1,4 @@
-// Checkmancer site. No dependencies.
+// Sphirit site. No dependencies.
 
 // Where the closed beta form posts: api/inscricao.php saves to MySQL on Hostinger
 // and copies the row to the Google Sheet. Set to null to switch the form off.
