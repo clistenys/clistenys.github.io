@@ -1,0 +1,312 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Checkmancer: xadrez em que cada exército lança magias</title>
+<meta name="description" content="Checkmancer é um jogo de xadrez tático em pixel art. Regras clássicas, seis exércitos com mana e manobras especiais, a Torre de Desafios, aulas que ensinam xadrez do zero e partidas online.">
+<meta property="og:title" content="Checkmancer">
+<meta property="og:description" content="Xadrez em que cada exército lança magias. Pixel art feita à mão por um dev solo do Brasil.">
+<meta property="og:image" content="https://checkmancer.mentalout.com.br/assets/video/trailer.jpg">
+<meta property="og:url" content="https://checkmancer.mentalout.com.br/pt/">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://checkmancer.mentalout.com.br/pt/">
+<link rel="alternate" hreflang="en" href="https://checkmancer.mentalout.com.br/">
+<link rel="alternate" hreflang="pt-BR" href="https://checkmancer.mentalout.com.br/pt/">
+<link rel="alternate" hreflang="x-default" href="https://checkmancer.mentalout.com.br/">
+<meta name="theme-color" content="#120e1a">
+<link rel="icon" href="../assets/logo/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="../assets/logo/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="../favicon.ico" sizes="any">
+<link rel="apple-touch-icon" href="../assets/logo/apple-touch-icon.png">
+<link rel="preload" href="../assets/fonts/Tiny5-Regular.ttf" as="font" type="font/ttf" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="../assets/fonts/space.css">
+<link rel="stylesheet" href="../style.css?v=45">
+<script src="../boot.js?v=36"></script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://checkmancer.mentalout.com.br/#website",
+      "name": "Checkmancer",
+      "url": "https://checkmancer.mentalout.com.br/",
+      "inLanguage": ["en", "pt-BR"]
+    },
+    {
+      "@type": "VideoGame",
+      "@id": "https://checkmancer.mentalout.com.br/#game",
+      "name": "Checkmancer",
+      "url": "https://checkmancer.mentalout.com.br/",
+      "description": "Checkmancer é um jogo de xadrez tático em pixel art: regras clássicas, seis exércitos com mana e manobras especiais, a Torre de Desafios, aulas que ensinam xadrez do zero e partidas online.",
+      "image": "https://checkmancer.mentalout.com.br/assets/video/trailer.jpg",
+      "genre": ["Xadrez", "Estratégia", "Pixel art"],
+      "playMode": ["SinglePlayer", "MultiPlayer"],
+      "author": {"@type": "Person", "name": "Lucas Paz", "url": "https://mentalout.com.br"},
+      "sameAs": ["https://www.instagram.com/pocohyto/"],
+      "trailer": {
+        "@type": "VideoObject",
+        "name": "Trailer do Checkmancer",
+        "description": "Trailer gravado dentro do jogo: partidas 8x8 com os exércitos Amoebi, Astrocéus e Muertos, uma partida Mini 5x5 com o Ashaninka, um andar da Torre de Desafios e uma aula com a Ater.",
+        "thumbnailUrl": "https://checkmancer.mentalout.com.br/assets/video/trailer.jpg",
+        "contentUrl": "https://checkmancer.mentalout.com.br/assets/video/trailer_pt.mp4",
+        "uploadDate": "2026-11-17T14:24:00-03:00",
+        "duration": "PT1M9S",
+        "inLanguage": "pt-BR"
+      }
+    }
+  ]
+}
+</script>
+<script src="../offline-data.js"></script>
+</head>
+<body>
+<div class="site-intro" id="intro" aria-hidden="true">
+  <div class="intro-stage">
+    <p class="label intro-kicker">Xadrez tático em pixel art</p>
+    <svg class="intro-logo" id="intro-logo" viewBox="0 -20 1100 140" shape-rendering="crispEdges"></svg>
+    <div class="intro-bar"><span></span></div>
+    <p class="hints intro-skip"><kbd>Clique</kbd> Pular</p>
+  </div>
+  <div class="intro-wipe"><span class="intro-shine"></span></div>
+</div>
+<div class="dots" aria-hidden="true"></div>
+<a class="skip" href="#armies">Pular para o conteúdo</a>
+
+<header class="nav" data-enter="down">
+  <a class="brand" href="#top" aria-label="Checkmancer, voltar ao topo"><svg class="logo logo-nav" viewBox="0 0 1100 100" shape-rendering="crispEdges" aria-hidden="true" focusable="false"><defs><clipPath id="mancer-nav"><path d="M640 20 L640 0 L680 0 L680 20 Z M640 100 L620 100 L620 20 L640 20 L640 40 L680 40 L680 20 L700 20 L700 100 L680 100 L680 60 L640 60 Z"/><path d="M740 100 L720 100 L720 0 L740 0 L740 20 L760 20 L760 40 L740 40 Z M800 100 L780 100 L780 60 L760 60 L760 40 L780 40 L780 0 L800 0 Z"/><path d="M840 20 L840 0 L880 0 L880 20 Z M840 79.999 L820 79.999 L820 20 L840 20 Z M880 40 L880 20 L900 20 L900 40 Z M900 79.999 L880 79.999 L880 60 L900 60 Z M880 79.999 L880 100 L840 100 L840 79.999 Z"/><path d="M1000 79.999 L1000 100 L920 100 L920 0 L1000 0 L1000 20 L940 20 L940 40 L980 40 L980 60 L940 60 L940 79.999 Z"/><path d="M1040 100 L1020 100 L1020 0 L1080 0 L1080 20 L1040 20 L1040 40 L1080 40 L1080 60 L1040 60 Z M1100 40 L1080 40 L1080 20 L1100 20 Z M1100 100 L1080 100 L1080 60 L1100 60 Z"/><path d="M500 100 L500 0 L520 0 L520 20 L540 20 L540 0 L560 0 L560 20 L580 20 L580 0 L600 0 L600 100 L580 100 L580 40 L560 40 L540 40 L520 40 L520 100 Z M540 79.999 L540 60 L560 60 L560 79.999 L560 100 L540 100 Z"/></clipPath><linearGradient id="shine-nav" x1="0" x2="1" y1="0" y2="0"><stop offset="0" stop-color="#fff" stop-opacity="0"/><stop offset=".3" stop-color="#fff" stop-opacity="0"/><stop offset=".3" stop-color="#fff" stop-opacity=".3"/><stop offset=".4" stop-color="#fff" stop-opacity=".3"/><stop offset=".4" stop-color="#fff" stop-opacity=".6"/><stop offset=".6" stop-color="#fff" stop-opacity=".6"/><stop offset=".6" stop-color="#fff" stop-opacity=".3"/><stop offset=".7" stop-color="#fff" stop-opacity=".3"/><stop offset=".7" stop-color="#fff" stop-opacity="0"/></linearGradient></defs><g class="logo-check"><path d="M20 20 L20 0 L60 0 L60 20 Z M20 79.999 L0 79.999 L0 20 L20 20 Z M60 40 L60 20 L80 20 L80 40 Z M80 79.999 L60 79.999 L60 60 L80 60 Z M60 79.999 L60 100 L20 100 L20 79.999 Z"/><path d="M120 100 L100 100 L100 0 L120 0 L120 40 L160 40 L160 0 L180 0 L180 100 L160 100 L160 60 L120 60 Z"/><path d="M280 79.999 L280 100 L200 100 L200 0 L280 0 L280 20 L220 20 L220 40 L260 40 L260 60 L220 60 L220 79.999 Z"/><path d="M320 20 L320 0 L360 0 L360 20 Z M320 79.999 L300 79.999 L300 20 L320 20 Z M360 40 L360 20 L380 20 L380 40 Z M380 79.999 L360 79.999 L360 60 L380 60 Z M360 79.999 L360 100 L320 100 L320 79.999 Z"/><path d="M420 100 L400 100 L400 0 L420 0 L420 40 L440 40 L440 60 L420 60 Z M460 20 L460 0 L480 0 L480 20 Z M440 40 L440 20 L460 20 L460 40 Z M460 79.999 L440 79.999 L440 60 L460 60 Z M460 100 L460 79.999 L480 79.999 L480 100 Z"/></g><g class="logo-mancer"><path d="M640 20 L640 0 L680 0 L680 20 Z M640 100 L620 100 L620 20 L640 20 L640 40 L680 40 L680 20 L700 20 L700 100 L680 100 L680 60 L640 60 Z"/><path d="M740 100 L720 100 L720 0 L740 0 L740 20 L760 20 L760 40 L740 40 Z M800 100 L780 100 L780 60 L760 60 L760 40 L780 40 L780 0 L800 0 Z"/><path d="M840 20 L840 0 L880 0 L880 20 Z M840 79.999 L820 79.999 L820 20 L840 20 Z M880 40 L880 20 L900 20 L900 40 Z M900 79.999 L880 79.999 L880 60 L900 60 Z M880 79.999 L880 100 L840 100 L840 79.999 Z"/><path d="M1000 79.999 L1000 100 L920 100 L920 0 L1000 0 L1000 20 L940 20 L940 40 L980 40 L980 60 L940 60 L940 79.999 Z"/><path d="M1040 100 L1020 100 L1020 0 L1080 0 L1080 20 L1040 20 L1040 40 L1080 40 L1080 60 L1040 60 Z M1100 40 L1080 40 L1080 20 L1100 20 Z M1100 100 L1080 100 L1080 60 L1100 60 Z"/><path d="M500 100 L500 0 L520 0 L520 20 L540 20 L540 0 L560 0 L560 20 L580 20 L580 0 L600 0 L600 100 L580 100 L580 40 L560 40 L540 40 L520 40 L520 100 Z M540 79.999 L540 60 L560 60 L560 79.999 L560 100 L540 100 Z"/></g><g clip-path="url(#mancer-nav)"><rect class="logo-shine" x="0" y="-20" width="160" height="140" fill="url(#shine-nav)"/></g></svg></a>
+  <nav aria-label="Seções" data-glow>
+    <a class="btn btn-ghost" href="#armies">Exércitos</a>
+    <a class="btn btn-ghost" href="#story">Torre</a>
+    <a class="btn btn-ghost" href="#modes">Modos</a>
+    <a class="btn btn-ghost" href="#devlog">Devlog</a>
+  </nav>
+  <a class="btn btn-ghost btn-lang" href="../index.html?lang=en" hreflang="en" lang="en" aria-label="View in English">EN</a>
+  <a class="btn btn-cta" href="#access">Acesso ao closed beta</a>
+</header>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="hero">
+    <header class="head">
+      <p class="label" data-enter style="--i:1">Xadrez tático em pixel art</p>
+      <h1 class="logo-title" data-enter style="--i:2"><span class="sr-only">Checkmancer</span><svg class="logo logo-hero" viewBox="0 0 1100 100" shape-rendering="crispEdges" aria-hidden="true" focusable="false"><defs><clipPath id="mancer-hero"><path d="M640 20 L640 0 L680 0 L680 20 Z M640 100 L620 100 L620 20 L640 20 L640 40 L680 40 L680 20 L700 20 L700 100 L680 100 L680 60 L640 60 Z"/><path d="M740 100 L720 100 L720 0 L740 0 L740 20 L760 20 L760 40 L740 40 Z M800 100 L780 100 L780 60 L760 60 L760 40 L780 40 L780 0 L800 0 Z"/><path d="M840 20 L840 0 L880 0 L880 20 Z M840 79.999 L820 79.999 L820 20 L840 20 Z M880 40 L880 20 L900 20 L900 40 Z M900 79.999 L880 79.999 L880 60 L900 60 Z M880 79.999 L880 100 L840 100 L840 79.999 Z"/><path d="M1000 79.999 L1000 100 L920 100 L920 0 L1000 0 L1000 20 L940 20 L940 40 L980 40 L980 60 L940 60 L940 79.999 Z"/><path d="M1040 100 L1020 100 L1020 0 L1080 0 L1080 20 L1040 20 L1040 40 L1080 40 L1080 60 L1040 60 Z M1100 40 L1080 40 L1080 20 L1100 20 Z M1100 100 L1080 100 L1080 60 L1100 60 Z"/><path d="M500 100 L500 0 L520 0 L520 20 L540 20 L540 0 L560 0 L560 20 L580 20 L580 0 L600 0 L600 100 L580 100 L580 40 L560 40 L540 40 L520 40 L520 100 Z M540 79.999 L540 60 L560 60 L560 79.999 L560 100 L540 100 Z"/></clipPath><linearGradient id="shine-hero" x1="0" x2="1" y1="0" y2="0"><stop offset="0" stop-color="#fff" stop-opacity="0"/><stop offset=".3" stop-color="#fff" stop-opacity="0"/><stop offset=".3" stop-color="#fff" stop-opacity=".3"/><stop offset=".4" stop-color="#fff" stop-opacity=".3"/><stop offset=".4" stop-color="#fff" stop-opacity=".6"/><stop offset=".6" stop-color="#fff" stop-opacity=".6"/><stop offset=".6" stop-color="#fff" stop-opacity=".3"/><stop offset=".7" stop-color="#fff" stop-opacity=".3"/><stop offset=".7" stop-color="#fff" stop-opacity="0"/></linearGradient></defs><g class="logo-check"><path d="M20 20 L20 0 L60 0 L60 20 Z M20 79.999 L0 79.999 L0 20 L20 20 Z M60 40 L60 20 L80 20 L80 40 Z M80 79.999 L60 79.999 L60 60 L80 60 Z M60 79.999 L60 100 L20 100 L20 79.999 Z"/><path d="M120 100 L100 100 L100 0 L120 0 L120 40 L160 40 L160 0 L180 0 L180 100 L160 100 L160 60 L120 60 Z"/><path d="M280 79.999 L280 100 L200 100 L200 0 L280 0 L280 20 L220 20 L220 40 L260 40 L260 60 L220 60 L220 79.999 Z"/><path d="M320 20 L320 0 L360 0 L360 20 Z M320 79.999 L300 79.999 L300 20 L320 20 Z M360 40 L360 20 L380 20 L380 40 Z M380 79.999 L360 79.999 L360 60 L380 60 Z M360 79.999 L360 100 L320 100 L320 79.999 Z"/><path d="M420 100 L400 100 L400 0 L420 0 L420 40 L440 40 L440 60 L420 60 Z M460 20 L460 0 L480 0 L480 20 Z M440 40 L440 20 L460 20 L460 40 Z M460 79.999 L440 79.999 L440 60 L460 60 Z M460 100 L460 79.999 L480 79.999 L480 100 Z"/></g><g class="logo-mancer"><path d="M640 20 L640 0 L680 0 L680 20 Z M640 100 L620 100 L620 20 L640 20 L640 40 L680 40 L680 20 L700 20 L700 100 L680 100 L680 60 L640 60 Z"/><path d="M740 100 L720 100 L720 0 L740 0 L740 20 L760 20 L760 40 L740 40 Z M800 100 L780 100 L780 60 L760 60 L760 40 L780 40 L780 0 L800 0 Z"/><path d="M840 20 L840 0 L880 0 L880 20 Z M840 79.999 L820 79.999 L820 20 L840 20 Z M880 40 L880 20 L900 20 L900 40 Z M900 79.999 L880 79.999 L880 60 L900 60 Z M880 79.999 L880 100 L840 100 L840 79.999 Z"/><path d="M1000 79.999 L1000 100 L920 100 L920 0 L1000 0 L1000 20 L940 20 L940 40 L980 40 L980 60 L940 60 L940 79.999 Z"/><path d="M1040 100 L1020 100 L1020 0 L1080 0 L1080 20 L1040 20 L1040 40 L1080 40 L1080 60 L1040 60 Z M1100 40 L1080 40 L1080 20 L1100 20 Z M1100 100 L1080 100 L1080 60 L1100 60 Z"/><path d="M500 100 L500 0 L520 0 L520 20 L540 20 L540 0 L560 0 L560 20 L580 20 L580 0 L600 0 L600 100 L580 100 L580 40 L560 40 L540 40 L520 40 L520 100 Z M540 79.999 L540 60 L560 60 L560 79.999 L560 100 L540 100 Z"/></g><g clip-path="url(#mancer-hero)"><rect class="logo-shine" x="0" y="-20" width="160" height="140" fill="url(#shine-hero)"/></g></svg></h1>
+      <span class="bar" aria-hidden="true" data-enter style="--i:3"></span>
+    </header>
+
+    <div class="hero-grid">
+      <figure class="screen" data-enter style="--i:4">
+        <div class="sel"><video id="trailer" src="../assets/video/trailer_pt.mp4?v=3" poster="../assets/video/trailer.jpg?v=3" autoplay muted loop playsinline aria-label="Trailer do Checkmancer: partidas 8x8 com os exércitos Amoebi, Astrocéus e Muertos, uma partida Mini 5x5 com o Ashaninka, um andar inteiro da Torre de Desafios e uma aula com a Ater"></video></div>
+        <figcaption class="trailer-cap"><span>Trailer gravado dentro do jogo.</span><button class="btn btn-ghost" id="sound" aria-pressed="false">Som desligado</button></figcaption>
+      </figure>
+
+      <div class="hero-menu" data-group="hero">
+        <a class="tile" href="#access" data-selected data-enter style="--i:5">
+          <span class="tile-top"><span class="px" data-icon="play"></span><span class="open">Abrir &gt;</span></span>
+          <strong class="tile-title">Closed beta</strong>
+          <span class="tile-sub">Inscreva-se para jogar antes</span>
+        </a>
+        <p class="lede" data-enter style="--i:6">Xadrez em que cada exército lança magias. Regras clássicas, com vida, mana e quatro manobras para cada exército.</p>
+        <div class="tile-row" data-enter style="--i:7">
+          <a class="tile" href="#armies"><span class="px" data-icon="estrela"></span><span class="tile-name">Exércitos</span></a>
+          <a class="tile" href="#story"><span class="px" data-icon="torre"></span><span class="tile-name">Torre</span></a>
+          <a class="tile" href="https://www.instagram.com/pocohyto/" target="_blank" rel="noopener"><span class="px" data-icon="globo"></span><span class="tile-name">Devlog</span></a>
+        </div>
+      </div>
+    </div>
+
+    <p class="hints" aria-hidden="true" data-enter style="--i:8"><kbd>Clique</kbd> Selecionar <kbd>Role</kbd> Explorar</p>
+  </section>
+
+  <!-- ARMIES -->
+  <section class="section" id="armies">
+    <header class="head">
+      <p class="label">Escolha seu exército</p>
+      <h2 class="title">Seis exércitos</h2>
+      <span class="bar" aria-hidden="true"></span>
+    </header>
+    <p class="intro">Cada lado escolhe um. Todo exército tem uma peça-âncora e quatro manobras pagas com mana.</p>
+
+    <div class="cards" role="tablist" aria-label="Exércitos" id="army-tabs"></div>
+
+    <div class="army panel" id="army-panel" role="tabpanel">
+      <div class="army-copy">
+        <p class="label" id="army-anchor"></p>
+        <h3 class="title" id="army-name"></h3>
+        <p id="army-desc"></p>
+        <ol class="slots" id="army-slots"></ol>
+      </div>
+      <figure class="screen army-screen">
+        <video id="army-video" muted loop playsinline autoplay></video>
+        <figcaption id="army-caption"></figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- STORY -->
+  <section class="section" id="story">
+    <header class="head">
+      <p class="label">Torre de Desafios</p>
+      <h2 class="title">Ajude Albus a subir a Torre</h2>
+      <span class="bar" aria-hidden="true"></span>
+    </header>
+    <p class="intro">O treinamento de Albus pela Ordem de Caxias, um andar de cada vez. São mais de 200 mil desafios selecionados e criados para a Torre, e alguns só se resolvem com as manobras do seu exército. A cada 5 desafios você escolhe um item para a subida, e os campeões da Ordem esperam por você com o exército de Caxias.</p>
+
+    <div class="story-grid">
+      <figure class="screen">
+        <video src="../assets/video/torre.mp4?v=1" poster="../assets/video/torre.jpg" muted loop playsinline autoplay aria-label="Imagens de um andar da Torre, gravadas no jogo: o xeque-mate, a escolha do item e o próximo andar descendo"></video>
+        <figcaption>Um andar gravado no jogo: o xeque-mate, o item e o próximo andar.</figcaption>
+      </figure>
+    </div>
+
+    <div class="story-more" data-group="story">
+      <div class="tactics">
+        <ul id="tactics"></ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- MODES -->
+  <section class="section" id="modes">
+    <header class="head">
+      <p class="label">Jeitos de jogar</p>
+      <h2 class="title">Modos</h2>
+      <span class="bar" aria-hidden="true"></span>
+    </header>
+    <div class="modes" data-group="modes">
+      <article class="tile mode" tabindex="0">
+        <span class="px" data-icon="globo"></span>
+        <h3 class="tile-name">Online</h3>
+        <p class="tile-sub">Entre na fila por uma partida no tabuleiro inteiro ou no Mini 5x5. Partidas online valem moedas e rating.</p>
+      </article>
+      <article class="tile mode" tabindex="0">
+        <span class="px" data-icon="pessoas"></span>
+        <h3 class="tile-name">Convidar amigo</h3>
+        <p class="tile-sub">Abra uma sala e passe o código de 6 letras para o seu amigo.</p>
+      </article>
+      <article class="tile mode" tabindex="0">
+        <span class="px" data-icon="robo"></span>
+        <h3 class="tile-name">Duelo contra Ater</h3>
+        <p class="tile-sub">Cinco níveis, do Básico ao Inteligente, no tabuleiro inteiro ou no Mini.</p>
+        <span class="levels" aria-label="Níveis do bot, de um a cinco">
+          <img src="../assets/sprites/NIVEL_BOT_1.png" alt=""><img src="../assets/sprites/NIVEL_BOT_2.png" alt=""><img src="../assets/sprites/NIVEL_BOT_3.png" alt=""><img src="../assets/sprites/NIVEL_BOT_4.png" alt=""><img src="../assets/sprites/NIVEL_BOT_5.png" alt="">
+        </span>
+      </article>
+      <article class="tile mode" tabindex="0">
+        <span class="px" data-icon="livro"></span>
+        <h3 class="tile-name">Aprender</h3>
+        <p class="tile-sub">Aulas que começam em como cada peça anda e vão até táticas, mates e manobras.</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- DEVLOG -->
+  <section class="section" id="devlog">
+    <header class="head">
+      <p class="label">Devlog</p>
+      <h2 class="title">Feito às claras</h2>
+      <span class="bar" aria-hidden="true"></span>
+    </header>
+    <p class="intro">O que construí no jogo, dia a dia.</p>
+    <div class="log" data-devlog data-limit="3" aria-busy="true"></div>
+    <div class="log-more">
+      <a class="btn btn-ghost" href="devlog.html">Ver todos os dias</a>
+      <a class="btn btn-ghost" href="https://www.instagram.com/pocohyto/" target="_blank" rel="noopener">Siga no Instagram</a>
+    </div>
+  </section>
+
+  <!-- PRE-ALPHA ACCESS -->
+  <section class="section final" id="access">
+    <header class="head">
+      <p class="label">Sua vez: closed beta</p>
+      <h2 class="title title-xl">Construa comigo</h2>
+      <span class="bar" aria-hidden="true"></span>
+    </header>
+    <div class="intro">
+      <p>O Checkmancer é feito por uma pessoa só, e eu não quero terminá-lo sozinho. Os testadores do closed beta entram em pequenas levas, e o teste é só o começo: depois dele, você continua e me ajuda a construir o jogo.</p>
+      <ul class="perks">
+        <li>Jogue as versões novas antes de todo mundo</li>
+        <li>Vote em novos exércitos, manobras e andares da Torre</li>
+        <li>Fale direto comigo e veja suas ideias entrarem no jogo</li>
+      </ul>
+      <p>Deixe seus dados e eu te mando um e-mail quando sua vaga abrir.</p>
+    </div>
+
+    <form class="access panel" id="access-form" novalidate>
+      <div class="field field-wide">
+        <label for="f-email" class="label">E-mail <span class="req">obrigatório</span></label>
+        <input id="f-email" name="email" type="email" autocomplete="email" placeholder="voce@exemplo.com" required>
+      </div>
+      <fieldset class="field field-wide">
+        <legend class="label">Seu nível no xadrez <span class="opt">igual aos 5 níveis de bot do jogo</span></legend>
+        <div class="choices choices-levels">
+          <label class="choice choice-level"><input type="radio" name="level" value="learning"><span><img src="../assets/sprites/NIVEL_BOT_1.png" alt=""><b>Ainda estou aprendendo as regras</b><small>Básico</small></span></label>
+          <label class="choice choice-level"><input type="radio" name="level" value="rules"><span><img src="../assets/sprites/NIVEL_BOT_2.png" alt=""><b>Sei as regras e jogo de vez em quando</b><small>Iniciante</small></span></label>
+          <label class="choice choice-level"><input type="radio" name="level" value="tactics"><span><img src="../assets/sprites/NIVEL_BOT_3.png" alt=""><b>Enxergo táticas como garfos e cravadas</b><small>Intermediário</small></span></label>
+          <label class="choice choice-level"><input type="radio" name="level" value="strategy"><span><img src="../assets/sprites/NIVEL_BOT_4.png" alt=""><b>Planejo lances e conheço aberturas e finais</b><small>Avançado</small></span></label>
+          <label class="choice choice-level"><input type="radio" name="level" value="rated"><span><img src="../assets/sprites/NIVEL_BOT_5.png" alt=""><b>Jogo partidas ranqueadas ou torneios</b><small>Inteligente</small></span></label>
+        </div>
+        <div class="rating" id="rating" hidden>
+          <label for="f-rating" class="label">Rating <span class="opt">opcional</span></label>
+          <input id="f-rating" name="rating" type="text" inputmode="numeric" maxlength="12" placeholder="ex.: 1500">
+        </div>
+      </fieldset>
+      <fieldset class="field field-wide">
+        <legend class="label">Onde você jogaria? <span class="opt">marque todos que quiser</span></legend>
+        <div class="choices">
+          <label class="choice"><input type="checkbox" name="platforms" value="windows"><span>PC com Windows</span></label><label class="choice"><input type="checkbox" name="platforms" value="mac"><span>Mac</span></label><label class="choice"><input type="checkbox" name="platforms" value="linux"><span>Linux</span></label><label class="choice"><input type="checkbox" name="platforms" value="browser"><span>Navegador</span></label><label class="choice"><input type="checkbox" name="platforms" value="phone"><span>Celular</span></label>
+        </div>
+      </fieldset>
+      <fieldset class="field field-wide">
+        <legend class="label">Qual exército chamou sua atenção?</legend>
+        <div class="choices">
+          <label class="choice choice-card"><input type="radio" name="army" value="reino_visco"><span><img src="../assets/sprites/cartao_amoebi.png?v=2" alt="">Amoebi</span></label><label class="choice choice-card"><input type="radio" name="army" value="unicornio"><span><img src="../assets/sprites/cartao_astroceus.png?v=2" alt="">Astrocéus</span></label><label class="choice choice-card"><input type="radio" name="army" value="ashaninka"><span><img src="../assets/sprites/cartao_ashaninka_v2.png" alt="">Ashaninka</span></label><label class="choice choice-card"><input type="radio" name="army" value="eclipse"><span><img src="../assets/sprites/cartao_catedral.png" alt="">Catedral</span></label><label class="choice choice-card"><input type="radio" name="army" value="muertos"><span><img src="../assets/sprites/cartao_muertos.png" alt="">Muertos</span></label><label class="choice choice-card"><input type="radio" name="army" value="caxias"><span><img src="../assets/sprites/cartao_caxias.png?v=2" alt="">Caxias</span></label>
+        </div>
+      </fieldset>
+      <fieldset class="field">
+        <legend class="label">Onde você conheceu o jogo?</legend>
+        <div class="choices">
+          <label class="choice"><input type="radio" name="heard_from" value="instagram"><span>Instagram</span></label><label class="choice"><input type="radio" name="heard_from" value="tiktok"><span>TikTok</span></label><label class="choice"><input type="radio" name="heard_from" value="reddit"><span>Reddit</span></label><label class="choice"><input type="radio" name="heard_from" value="friend"><span>Um amigo</span></label><label class="choice"><input type="radio" name="heard_from" value="other"><span>Outro</span></label>
+        </div>
+      </fieldset>
+      <div class="field">
+        <label for="f-country" class="label">País</label>
+        <div class="combo" id="combo">
+          <span class="combo-flag" id="combo-flag" aria-hidden="true"></span>
+          <input id="f-country" type="text" role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="country-list" autocomplete="off" spellcheck="false" placeholder="Busque seu país">
+          <span class="combo-arrow" aria-hidden="true"></span>
+          <ul class="combo-list" id="country-list" role="listbox" aria-label="Países" hidden></ul>
+        </div>
+        <input type="hidden" name="country" id="f-country-name">
+        <input type="hidden" name="country_code" id="f-country-code">
+      </div>
+      <label class="consent field-wide">
+        <input type="checkbox" name="consent" value="yes" required>
+        <span>Aceito receber e-mails sobre o closed beta e o desenvolvimento do Checkmancer, e posso pedir a exclusão dos meus dados quando quiser. <a href="privacy.html">Como meus dados são usados</a></span>
+      </label>
+      <input class="hp" type="text" name="cm_hp" tabindex="-1" autocomplete="off" aria-hidden="true" data-1p-ignore data-lpignore="true" data-bwignore data-form-type="other">
+      <div class="access-foot field-wide">
+        <button class="btn btn-cta btn-big" type="submit">Entrar no closed beta</button>
+        <p class="access-msg" id="access-msg" aria-live="polite"></p>
+      </div>
+    </form>
+  </section>
+  <p class="page-end"><a href="privacy.html">Privacidade</a><span aria-hidden="true">·</span><a href="../index.html?lang=en" hreflang="en" lang="en">View in English</a></p>
+</main>
+
+<footer class="foot" data-enter="up">
+  <span class="wordmark">Checkmancer</span>
+  <p>Pixel art feita à mão por um dev solo, <a class="ext" href="https://mentalout.com.br" target="_blank" rel="noopener">Lucas Paz<span class="px" data-icon="externo" aria-label="(abre em nova aba)"></span></a>, do Brasil.</p>
+  <a class="btn btn-ghost" href="https://www.instagram.com/pocohyto/" target="_blank" rel="noopener">Instagram</a>
+</footer>
+
+<script src="../app.js?v=47"></script>
+<script src="../devlog.js?v=1"></script>
+</body>
+</html>
