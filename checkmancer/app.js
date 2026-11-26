@@ -147,7 +147,7 @@ function pick(id) {
   el("army-panel").setAttribute("aria-labelledby", "tab-" + id);
   el("army-anchor").textContent = a.anchor;
   el("army-name").textContent = a.name;
-  el("army-desc").textContent = a.desc;
+  el("army-desc").textContent = PT ? "Lorem ipsum dolor sit amet, consectetur adipiscing elit." : a.desc;
   el("army-caption").textContent = a.caption;
   armyVideo.poster = VID + a.video + ".jpg?v=3";
   armyVideo.src = VID + a.video + ".mp4?v=3";   // v=3: re-recorded with the six armies (yuv420p for phones)
