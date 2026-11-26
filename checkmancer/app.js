@@ -4,7 +4,7 @@
 // and copies the row to the Google Sheet. Set to null to switch the form off.
 // The Portuguese page lives in pt/ and loads this same file: PT picks its texts, ROOT fixes the paths.
 const PT = document.documentElement.lang.startsWith("pt");
-const ROOT = PT ? "../" : "";
+const ROOT = document.documentElement.dataset.assetsRoot || (PT ? "../" : "");
 const tr = (en, pt) => (PT ? pt : en);
 
 const ACCESS_ENDPOINT = null;

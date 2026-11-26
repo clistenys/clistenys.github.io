@@ -5,7 +5,7 @@
   var boxes = document.querySelectorAll("[data-devlog]");
   if (!boxes.length) return;
   var pt = document.documentElement.lang.indexOf("pt") === 0;
-  var root = pt ? "../" : "";
+  var root = document.documentElement.dataset.assetsRoot || (pt ? "../" : "");
   var locale = pt ? "pt-BR" : "en-US";
   var day = new Intl.DateTimeFormat(locale, { day: "numeric", month: "short", year: "numeric", timeZone: "UTC" });
   var month = new Intl.DateTimeFormat(locale, { month: "long", year: "numeric", timeZone: "UTC" });
