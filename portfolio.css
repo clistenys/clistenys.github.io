@@ -1,0 +1,8 @@
+h1{font:normal clamp(3.5rem,9vw,8rem)/1 Tiny5,monospace;letter-spacing:-.04em;color:#ffd09a;margin:0}
+.panel{border-image:none;border:2px solid #786177;background:#251e30}
+.cards .card img{width:clamp(90px,17vw,185px);height:auto;aspect-ratio:2;object-fit:cover}
+.screen>img,#action{display:block;width:100%;height:auto;image-rendering:pixelated}
+#items{display:flex;flex-wrap:wrap;gap:8px}#items button{display:grid;justify-items:center}#items img{width:60px;image-rendering:pixelated}
+#items [aria-pressed=true]{outline:2px solid #ffd09a;color:#ffd09a}
+#motion{margin-top:10px}.wordmark{margin-right:auto}.foot{display:flex;align-items:center;justify-content:space-between}
+#mechanics{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:12px}
