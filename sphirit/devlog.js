@@ -31,7 +31,7 @@
     return art;
   }
 
-  (location.protocol === "file:" ? Promise.resolve(window.checkmancerOffline.devlog) : fetch(root + "assets/devlog.json").then(function (r) { return r.json(); }))
+  (location.protocol === "file:" ? Promise.resolve(window.sphiritOffline.devlog) : fetch(root + "assets/devlog.json").then(function (r) { return r.json(); }))
     .then(function (log) {
       log.sort(function (a, b) { return a.d < b.d ? 1 : -1; });
       boxes.forEach(function (box) {

@@ -16,7 +16,7 @@ const reduced = matchMedia("(prefers-reduced-motion: reduce)").matches;
 const unit = () => parseFloat(getComputedStyle(document.documentElement).getPropertyValue("--u")) || 3;
 
 /* ------------------------------------------------------------ pixel icons (icone_pixel.gd) */
-(location.protocol === "file:" ? Promise.resolve(window.checkmancerOffline.icons) : fetch(ROOT + "assets/icons.json").then((r) => r.json())).then((icons) => {
+(location.protocol === "file:" ? Promise.resolve(window.sphiritOffline.icons) : fetch(ROOT + "assets/icons.json").then((r) => r.json())).then((icons) => {
   const draw = () => {
     const u = unit();
     document.querySelectorAll(".px[data-icon]").forEach((el) => {
@@ -365,7 +365,7 @@ tabs.addEventListener("keydown", (e) => {
   const combo = el("combo"), input = el("f-country"), list = el("country-list"), flag = el("combo-flag");
   const nameOut = el("f-country-name"), codeOut = el("f-country-code");
   if (!combo) return;
-  let countries = await (location.protocol === "file:" ? Promise.resolve(window.checkmancerOffline.countries) : fetch(ROOT + "assets/countries.json").then((r) => r.json())).catch(() => []);
+  let countries = await (location.protocol === "file:" ? Promise.resolve(window.sphiritOffline.countries) : fetch(ROOT + "assets/countries.json").then((r) => r.json())).catch(() => []);
   // Portuguese page: show the names in Portuguese, but keep sending the English name and the code
   let ptName = null;
   try { ptName = PT ? new Intl.DisplayNames(["pt-BR"], { type: "region" }) : null; } catch (e) {}
