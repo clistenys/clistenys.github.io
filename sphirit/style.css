@@ -685,3 +685,20 @@ html.intro-in [data-enter="up"] { animation-name: enter-from-bottom; animation-d
 .header-wordmark { display:block; width:clamp(86px, 10vw, 126px); height:auto; }
 .gallery .cards { scrollbar-width:none; }
 .gallery .cards::-webkit-scrollbar { display:none; }
+
+.sphirit-title {
+  margin: 0;
+  font: 400 clamp(48px, 6vw, 84px)/.95 Tiny5, monospace;
+  text-transform: uppercase;
+  color: var(--texto-forte);
+}
+.sphirit-title span {
+  color: var(--acento);
+  text-shadow: 0 0 8px rgb(255 48 99 / .28);
+}
+@media (prefers-reduced-motion: no-preference) {
+  .sphirit-title span { animation: sphirit-glow 3.2s ease-in-out infinite; }
+  @keyframes sphirit-glow {
+    25% { color: #ff648c; text-shadow: 0 0 12px rgb(255 48 99 / .55); }
+  }
+}
